@@ -1,0 +1,22 @@
+
+
+.navbar {
+    border: 1px solid red;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;  
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
