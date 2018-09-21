@@ -1,4 +1,4 @@
-#The Tobacco Cellar
+ # The Tobacco Cellar
 
 *I've decided to recreate my quarter two project into an exciting and fully functional application using React.js for the front end, Express and PostgreSQL for the back end.
 
