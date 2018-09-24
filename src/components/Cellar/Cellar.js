@@ -1,11 +1,10 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
-import '../../index.css'
-import './List.css'
+// import './Cellar.css'
 
-const List = (props) => {
+const Cellar = (props) => {
     return(
-        <div className="List">
+        <div className="Cellar">
             <NavBar />
             <h1>This is just a crude example to see if I can make routes work.</h1>
             <ul>
@@ -17,4 +16,4 @@ const List = (props) => {
     );
 }
 
-export default List;
+export default Cellar;
