@@ -1,6 +1,6 @@
 import React from 'react';
-import './NavBar.css';
-// import Radium from 'radium';
+import classes from './NavBar.css';
+
 
 
 const NavBar = (props) => {
@@ -10,13 +10,12 @@ const NavBar = (props) => {
 
 
     return(
-            <ul className="navbar-container">
-                <a href="/"><li className="navbar-title">The Tobacco Cellar</li></a>
-                <a href="/Cellar"><li>Cellar</li></a>
-                <a href="/Pipes"><li>Pipes</li></a>
-                <a href="/Credentials"><li>Credentials</li></a>
-                <hr/>
-            </ul>
+        <div className={classes.NavBar}>
+                <a href="/" className={classes.title}>The Tobacco Cellar</a>
+                <a href="/Cellar">Cellar</a>
+                <a href="/Pipes">Pipes</a>
+                <a href="/Credentials">Credentials</a>
+        </div>
     );
 }
 

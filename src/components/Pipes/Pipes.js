@@ -1,17 +1,20 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
-// import './Pipes.css';
+import Footer from '../Footer/Footer';
+import classes from './Pipes.css';
 
 
 
 const Pipes = (props) => {
     return(
-        <div className="Pipes">
+        <div>
             <NavBar />
-            <br/>
-            <button>One</button>
-            <button>And a</button>
-            <button>Two</button>
+            <div className={classes.Pipes}>
+              <button>One</button>
+              <button>And a</button>
+              <button>Two</button>
+            </div>
+            <Footer />
         </div>
     );
 }

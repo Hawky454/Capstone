@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import NavBar from '../components/NavBar/NavBar';
-
-// import './App.css';
+import Footer from '../components/Footer/Footer';
+import classes from './App.css';
+import Home from '../components/Home/Home';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <NavBar />
-        <h1>The Tobacco Cellar</h1>
-        <h1>HomePage</h1>
-      </div>
+        <div className={classes.App}>
+           <NavBar />
+             <Home className={classes.App}title="This is props being passed along biatch!"/>
+           <Footer />
+        </div>
     );
   }
 }

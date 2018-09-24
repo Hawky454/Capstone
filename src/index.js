@@ -12,7 +12,7 @@ import Credentials from './components/Credentials/Credentials'
 ReactDOM.render(
     <Router>
         <div>
-            <Route exact path="/" component={App} />
+            <Route exact path="/" component={App} /> 
             <Route path="/Cellar" component={Cellar} />
             <Route path="/Pipes" component={Pipes} />
             <Route path="/Credentials" component={Credentials} />
