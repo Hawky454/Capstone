@@ -9,7 +9,7 @@ class App extends Component {
     return (
         <div className={classes.App}>
            <NavBar />
-             <Home className={classes.App}title="This is props being passed along biatch!"/>
+             <Home />
            <Footer />
         </div>
     );
