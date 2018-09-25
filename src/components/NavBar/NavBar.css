@@ -11,13 +11,23 @@
     letter-spacing: 1px;
 }
 
-a {
+.left {
     float: left;
     display: block;
     color: #a1dbff;
     padding: 14px 16px;
     text-decoration: none;
 }
+
+.right {
+    float: right;
+    display: block;
+    color: #a1dbff;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
 
 a:hover {
     background: #ddd;

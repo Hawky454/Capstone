@@ -1,3 +1,16 @@
+body {
+    background: url('../../assets/my-pipes.jpg')no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+
+}
+
 .Home {
     margin-top: 150px;
 }
+
+

@@ -11,10 +11,13 @@ const NavBar = (props) => {
 
     return(
         <div className={classes.NavBar}>
-                <a href="/" className={classes.title}>The Tobacco Cellar</a>
-                <a href="/Cellar">Cellar</a>
-                <a href="/Pipes">Pipes</a>
-                <a href="/Credentials">Credentials</a>
+          <a href="/" className={classes.left}>The Tobacco Cellar</a>
+          <a href="/Cellar" className={classes.left}>Cellar</a>
+          <a href="/Pipes" className={classes.left}>Pipes</a>
+          <section>
+            <a href="/credentials" className={classes.right}>Sign Up</a>
+            <a href="/credentials" className={classes.right}>Sign In</a>
+          </section>
         </div>
     );
 }
