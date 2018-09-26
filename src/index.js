@@ -7,15 +7,15 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Cellar from './components/Cellar/Cellar';
 import Pipes from './components/Pipes/Pipes';
-import Credentials from './components/Credentials/Credentials'
+import SignIn from './components/SignIn/SignIn'
 
 ReactDOM.render(
     <Router>
         <div>
             <Route exact path="/" component={App} /> 
-            <Route path="/Cellar" component={Cellar} />
-            <Route path="/Pipes" component={Pipes} />
-            <Route path="/Credentials" component={Credentials} />
+            <Route exact path="/Cellar" component={Cellar} />
+            <Route exact path="/Pipes" component={Pipes} />
+            <Route exact path="/SignIn" component={SignIn} />
         </div>
     </Router>, document.getElementById('root')
 );

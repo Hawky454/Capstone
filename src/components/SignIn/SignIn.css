@@ -1,0 +1,55 @@
+.SignIn {
+    display: flex;
+    margin: 200px auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    background-color: rgba(0,0,0, 0.7);
+    text-shadow: 2px 2px grey;
+
+}
+
+.SignIn input {
+    width: 250px;
+    height: 40px;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    background: #f0f9ff; 
+    background: -moz-linear-gradient(top, #f0f9ff 0%, #cbebff 47%, #a1dbff 100%); 
+    background: -webkit-linear-gradient(top, #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); 
+    background: linear-gradient(to bottom, #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=0 ); 
+}
+
+.SignIn button {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 220px;
+    cursor: pointer;
+    font-family: 'Cormorant Unicase', serif;
+    background: #f0f9ff; 
+    background: -moz-linear-gradient(top, #f0f9ff 0%, #cbebff 47%, #a1dbff 100%); 
+    background: -webkit-linear-gradient(top, #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); 
+    background: linear-gradient(to bottom, #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=0 ); 
+}
+
+.SignIn:hover {
+    transform: scale(0.98); 
+    /* filter: drop-shadow(0 0 0.15rem rgb(0, 0, 0)); */
+} 
+
+
+.SignIn label {
+    font-weight: bolder;
+    font-size: 20px;
+    color: #a1dbff;
+}
+

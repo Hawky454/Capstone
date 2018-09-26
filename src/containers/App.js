@@ -5,6 +5,16 @@ import classes from './App.css';
 import Home from '../components/Home/Home';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: ''
+    }
+  }
+
+  
+
+
   render() {
     return (
         <div className={classes.App}>

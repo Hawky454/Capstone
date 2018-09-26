@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import classes from './Cellar.css';
 
-const Cellar = (props) => {
+class Cellar extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            
+        }
+    }
+
+
+    render() {
     return(
         <div className={classes.Cellar}>
             <NavBar />
@@ -16,6 +25,7 @@ const Cellar = (props) => {
             <Footer />
         </div>
     );
+  }
 }
 
 export default Cellar;

@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import classes from './Pipes.css';
 
 
 
-const Pipes = (props) => {
+class Pipes extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            
+        }
+    }
+
+    render() {
     return(
         <div>
             <NavBar />
@@ -17,6 +25,7 @@ const Pipes = (props) => {
             <Footer />
         </div>
     );
+  }
 }
 
 export default Pipes;
