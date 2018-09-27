@@ -1,5 +1,5 @@
 /* background options: ../../assets/my-pipes.jpg 
-                      
+   background images and patterns are better suited to the index.css                 
 */
 
 /* body {
@@ -12,9 +12,6 @@
     min-height: 100vh;
 } */
 
-body {
-    background: url('../../assets/skulls.png');
-}
 
 
 .Home {
@@ -33,7 +30,7 @@ body {
     border-radius: 5px;
     box-shadow: 5px 10px 8px #888888;
     margin: auto;
-    background: url('../../assets/four-pipes.jpg');
+    background: url('../../assets/swirl_pattern.png');
 }
 
 .card2 {
@@ -43,7 +40,7 @@ body {
     border-radius: 5px;
     box-shadow: 5px 10px 8px #888888;
     margin: auto;
-    background: url('../../assets/pipe-tobacco.jpg') center;
+    background: url('../../assets/upfeathers.png') center;
     /* -webkit-background-size: cover; */
     /* -moz-background-size: cover; */
     /* -o-background-size: cover; */
