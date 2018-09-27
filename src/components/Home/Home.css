@@ -19,6 +19,7 @@ body {
 
 .Home {
     margin-top: 125px;
+    margin-bottom: 125px;
 }
 
 .Home .container {
@@ -42,20 +43,22 @@ body {
     border-radius: 5px;
     box-shadow: 5px 10px 8px #888888;
     margin: auto;
-    background: url('../../assets/pipe-tobacco.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: url('../../assets/pipe-tobacco.jpg') center;
+    /* -webkit-background-size: cover; */
+    /* -moz-background-size: cover; */
+    /* -o-background-size: cover; */
+    /* background-size: cover; */
 }
 
 
 .Home p {
-    color: white;
+    color: black;
+    background: white;
+    border: 2px solid black;
     text-align: center;
     font-weight: bolder;
     font-size: 24px;
-    font-family: 'Notable', sans-serif;
+    font-family: 'Bowlby One SC', cursive;
 }
 
 

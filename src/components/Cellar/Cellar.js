@@ -3,6 +3,9 @@ import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import classes from './Cellar.css';
 
+
+
+
 class Cellar extends Component{
     constructor(props) {
         super(props);

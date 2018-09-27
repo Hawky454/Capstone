@@ -1,56 +1,29 @@
-let express = require('express');
-let bodyParser = require('body-parser');
-let morgan = require('morgan');
-let pg = require('pg');
-let fs = require('fs');
-let path = require('path');
-let knexPath = path.join(__dirname, 'knexfile.js');
-let port = process.env.PORT || 8000;
-let env = process.env.NODE_ENV || 'development';
-let config = require(knexPath)[env];
-let knex = require('knex')(config);
-let app = express();
-
-// let cellar = require('')
-
-app.set('src', path.join(__dirname, 'src'));
-
-console.log(config);
+const express = require('express');
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const pg = require('pg');
+const fs = require('fs');
+const path = require('path');
+const knexPath = path.join(__dirname, 'knexfile.js');
+const port = process.env.PORT || 8000;
+const env = process.env.NODE_ENV || 'development';
+const config = require(knexPath)[env];
+const knex = require('knex')(config);
+const app = express();
 
 app.disable('x-powered-by');
 app.use(morgan('short'));
-
-
 app.use(bodyParser.json());
-app.use(express.static(path.join('../build')));
-app.use(express.static(path.join('../src')));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, '../build')));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 
-app.get('/ping', function (req, res) {
-  return res.send('pong');
-});
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+//  app.use((_req, res) => {
+//     res.sendStatus(404);
+//   });
 
-
-app.use(function(request, response, next) {
-    response.header("Access-Control-Allow-Origin", "*");
-    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
-
-
- 
-
-
- app.use((_req, res) => {
-    res.sendStatus(404);
-  });
-
-console.log('is this thing on?')
+// console.log('is this thing on?');
 
 // app.use((err, _req, res, _next) => {
 //     if (err.status) {
@@ -61,8 +34,28 @@ console.log('is this thing on?')
 //     }
 // });
 
+
+
 app.listen(port, () => console.log('This is fucking working! Listening on port ' + port)); 
 
+
+
+
+
+app.use(function(req, res, next) {
+  let err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.json({
+    message: err.message,
+    error: req.app.get('env') === 'development' ? err : {}
+  });
+});
 
 
 module.exports = app;
