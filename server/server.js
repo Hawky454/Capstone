@@ -1,5 +1,3 @@
-'use strict';
-
 let express = require('express');
 let bodyParser = require('body-parser');
 let morgan = require('morgan');
@@ -13,15 +11,29 @@ let config = require(knexPath)[env];
 let knex = require('knex')(config);
 let app = express();
 
-// const PORT = 8000;
+// let cellar = require('')
+
+app.set('src', path.join(__dirname, 'src'));
+
+console.log(config);
 
 app.disable('x-powered-by');
 app.use(morgan('short'));
 
 
 app.use(bodyParser.json());
+app.use(express.static(path.join('../build')));
+app.use(express.static(path.join('../src')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+app.get('/ping', function (req, res) {
+  return res.send('pong');
+});
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 
 app.use(function(request, response, next) {
@@ -40,14 +52,14 @@ app.use(function(request, response, next) {
 
 console.log('is this thing on?')
 
-app.use((err, _req, res, _next) => {
-    if (err.status) {
-      return res
-        .status(err.status)
-        .set('Content-Type', 'text/plain')
-        .send(err.message);
-    }
-});
+// app.use((err, _req, res, _next) => {
+//     if (err.status) {
+//       return res
+//         .status(err.status)
+//         .set('Content-Type', 'text/plain')
+//         .send(err.message);
+//     }
+// });
 
 app.listen(port, () => console.log('This is fucking working! Listening on port ' + port)); 
 

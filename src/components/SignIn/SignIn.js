@@ -3,24 +3,30 @@ import NavBar from '../NavBar/NavBar';
 import classes from './SignIn.css';
 import Footer from '../Footer/Footer';
 
+
 class SignIn extends Component {
     constructor(props) {
         super(props);
         this.state = {
             email: '',
             password: '',
+            formErrors: {email: '', password: ''},
+            emailValid: false,
+            passwordValid: false,
+            formValid: false
         }
     }
 
-    handleUserInput = (event) => {
-        console.log(event.target.value);
-        const name = event.target.name;
-        const value = event.target.value;
-        this.setState({
-            [name]: value
-        });
-      }
 
+    
+
+
+    handleUserInput(event) {
+      console.log(event.target.value);
+        
+    }
+
+    
 
     render() {
     return(
@@ -34,7 +40,7 @@ class SignIn extends Component {
                     name="email" 
                     autoComplete="email" 
                     placeholder="Email" 
-                    value={this.state.userName} 
+                    value={this.state.name} 
                     onChange={(event) => this.handleUserInput(event)}
                     />
                 </label>
@@ -44,8 +50,8 @@ class SignIn extends Component {
                     name="password" 
                     autoComplete="password" 
                     placeholder="Password"
-                    onChange={(event) => this.handleUserInput(event)}
-                    value={this.state.password} 
+                    // onChange={(event) => this.handleUserInput(event)}
+                    // value={this.state.password} 
                     />
                 </label>
             <section className={classes.btn}>

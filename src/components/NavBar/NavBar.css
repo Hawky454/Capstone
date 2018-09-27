@@ -12,6 +12,7 @@
     font-size: 34px;
     opacity: 0.7;
     letter-spacing: 1px;
+    border: 2px solid black;
 }
 
 .left {
@@ -36,3 +37,4 @@ a:hover {
     background: #f7f7df;
     color: black;
 }
+
