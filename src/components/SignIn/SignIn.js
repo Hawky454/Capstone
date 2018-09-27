@@ -7,12 +7,18 @@ class SignIn extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            users: ''
+            email: '',
+            password: '',
         }
     }
 
-    logInHandler = () => {
-        console.log('Well, for now, I know I can go about it this way.')
+    handleUserInput = (event) => {
+        console.log(event.target.value);
+        const name = event.target.name;
+        const value = event.target.value;
+        this.setState({
+            [name]: value
+        });
       }
 
 
@@ -22,14 +28,28 @@ class SignIn extends Component {
           <NavBar />
           <div className={classes.SignIn}>
             <form>
-                <label htmlFor="userName">User Name:
-                <input type="text" name="userName" autoComplete="userName" placeholder="User Name"/>
+                <label htmlFor="email" className={classes.emailLabel}>Email:
+                <input 
+                    type="email" 
+                    name="email" 
+                    autoComplete="email" 
+                    placeholder="Email" 
+                    value={this.state.userName} 
+                    onChange={(event) => this.handleUserInput(event)}
+                    />
                 </label>
-                <label htmlFor="password">Pass-word : 
-                <input type="password" name="password" autoComplete="password" placeholder="Password"/>
+                <label htmlFor="password">Password: 
+                <input 
+                    type="password" 
+                    name="password" 
+                    autoComplete="password" 
+                    placeholder="Password"
+                    onChange={(event) => this.handleUserInput(event)}
+                    value={this.state.password} 
+                    />
                 </label>
             <section className={classes.btn}>
-                <button onClick={this.logInHandler}>Sign In</button>
+                <button>Sign In</button>
             </section>
             </form>
           </div>

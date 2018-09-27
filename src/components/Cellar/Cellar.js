@@ -7,8 +7,14 @@ class Cellar extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            
+            users: [],
+            cellar: '',
+            pipes: ''
         }
+    }
+
+    componentDidMount() {
+        
     }
 
 

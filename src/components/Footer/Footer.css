@@ -1,12 +1,17 @@
+/* alt colors: skuls bg match: #f7f7df
+    baby-blue match: #a1dbff
+*/
+
 .Footer{
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 30px;
     background: #000;
-    color: #a1dbff;
+    color: #f7f7df;
     opacity: 0.7;
     text-align: center;
     padding-top: 10px;
     letter-spacing: 5px;
   }
+

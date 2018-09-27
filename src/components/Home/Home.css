@@ -1,4 +1,6 @@
-/* background options: ../../assets/my-pipes.jpg  */
+/* background options: ../../assets/my-pipes.jpg 
+                      
+*/
 
 /* body {
     background: url('../../assets/oriental.png'); no-repeat center center fixed
@@ -11,12 +13,49 @@
 } */
 
 body {
-    background: url('../../assets/oriental.png');
+    background: url('../../assets/skulls.png');
 }
 
 
 .Home {
-    margin-top: 150px;
+    margin-top: 125px;
+}
+
+.Home .container {
+    display: flex;
+}
+
+.card1 {
+    width: 550px;
+    height: 550px;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 10px 8px #888888;
+    margin: auto;
+    background: url('../../assets/four-pipes.jpg');
+}
+
+.card2 {
+    width: 550px;
+    height: 550px;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 10px 8px #888888;
+    margin: auto;
+    background: url('../../assets/pipe-tobacco.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.Home p {
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 24px;
+    font-family: 'Notable', sans-serif;
 }
 
 

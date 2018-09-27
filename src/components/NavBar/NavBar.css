@@ -1,4 +1,7 @@
-/*optional colorz: #f2f2f2 */
+/*optional colorz: #f2f2f2 
+  match the skulls background: #f7f7df
+  baby blue background: #a1dbff
+*/
 
 .NavBar {
     overflow: hidden;
@@ -14,7 +17,7 @@
 .left {
     float: left;
     display: block;
-    color: #a1dbff;
+    color: #f7f7df;
     padding: 14px 16px;
     text-decoration: none;
 }
@@ -22,7 +25,7 @@
 .right {
     float: right;
     display: block;
-    color: #a1dbff;
+    color: #f7f7df;
     padding: 14px 16px;
     text-decoration: none;
 }
@@ -30,6 +33,6 @@
 
 
 a:hover {
-    background: #a1dbff;
+    background: #f7f7df;
     color: black;
 }
