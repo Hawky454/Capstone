@@ -17,9 +17,9 @@ ReactDOM.render(
     <Router>
         <div>
             <Route exact path="/" component={App} /> 
-            <Route exact path="/Cellar" component={Cellar} />
-            <Route exact path="/Pipes" component={Pipes} />
-            <Route exact path="/SignIn" component={SignIn} />
+            <Route path="/Cellar" component={Cellar} />
+            <Route path="/Pipes" component={Pipes} />
+            <Route path="/SignIn" component={SignIn} />
         </div>
     </Router>, document.getElementById('root')
 );
