@@ -15,8 +15,11 @@
 
 
 .Home {
-    margin-top: 125px;
+    /* margin-top: 125px;
     margin-bottom: 125px;
+    margin-left: 165px;
+    margin-right: 165px; */
+    margin: 125px 165px;
 }
 
 .Home .container {
