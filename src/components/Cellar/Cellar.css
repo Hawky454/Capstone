@@ -1,3 +1,20 @@
 .Cellar {
     margin-top: 100px;
 }
+
+.Cellar ul{
+    list-style: none;
+
+}
+
+.Cellar img {
+    box-shadow: 4px 4px 10px;
+    margin-top: 22px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid red;
+}
