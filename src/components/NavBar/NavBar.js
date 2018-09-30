@@ -8,7 +8,7 @@ const NavBar = (props) => {
     return(
         <div className={classes.NavBar}>
           <Link to="/"><span className={classes.left}>The Tobacco Cellar</span></Link>
-          <Link to="/Cellar"><span className={classes.left}>Cellar</span></Link>
+          <Link to="/CellarList"><span className={classes.left}>Cellar</span></Link>
           <Link to="/Pipes"><span className={classes.left}>Pipes</span></Link>
           <section>
             <Link to="/SignUp"><span className={classes.right}>Sign Up</span></Link>

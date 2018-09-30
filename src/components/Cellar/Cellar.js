@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import classes from './Cellar.css';
+// import CellarList from '../CellarList/CellarList';
 
 const imageStyle = {
     width: 150,
@@ -27,33 +28,30 @@ class Cellar extends Component{
     }
 
     
-    //! I have no fucking clue as to why the NavBar and Footer are now black but everything else remains the same.... look into it!!!!! 9-29-18
     render() {
     return(
         this.state.cellarData.map((data, index) => {
             return <div className={classes.Cellar}>
-                        <NavBar className={classes.NavBar} key={data.id}/>
-                        <div className={classes.container}>
-                               <img 
-                                 src={data.image} 
-                                 alt ="what ever dude!"
-                                 style={imageStyle}/>
-                           <ul>
-                               <li key={data.id}>{data.blend}</li>
-                               <li key={data.id}>{data.brand}</li>
-                               <li key={data.id}>{data.weight} lbs</li>
-                               <li key={data.id}>{data.age} years</li>
-                               <li key={data.id}>{data.purchased.slice(0,10)}</li>
-                               <li key={data.id}>{data.available ? 'true' : 'false' }</li>
-                               <li key={data.id}>{data.rating} out of 5 stars.</li>
-                               <li>${data.price}</li>
-                           </ul>
-                         </div>         
-                        <Footer />
-                    </div>
-        })
-    );
-  }
+                     <div className={classes.container}>
+                            <img 
+                              src={data.image} 
+                              alt ="what ever dude!"
+                              style={imageStyle}/>
+                        <ul>
+                            <li key={data.id}>{data.blend}</li>
+                            <li key={data.id}>{data.brand}</li>
+                            <li key={data.id}>{data.weight} lbs</li>
+                            <li key={data.id}>{data.age} years</li>
+                            <li key={data.id}>{data.purchased.slice(0,10)}</li>
+                            <li key={data.id}>{data.available ? 'true' : 'false' }</li>
+                            <li key={data.id}>{data.rating} out of 5 stars.</li>
+                            <li>${data.price}</li>
+                        </ul>
+                      </div>         
+                 </div>
+             })
+        );
+     }
 }
 
 export default Cellar;

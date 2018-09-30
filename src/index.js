@@ -5,6 +5,7 @@ import App from './containers/App';
 // import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+import CellarList from './components/CellarList/CellarList';
 import Cellar from './components/Cellar/Cellar';
 import Pipes from './components/Pipes/Pipes';
 import SignIn from './components/SignIn/SignIn';
@@ -17,7 +18,7 @@ ReactDOM.render(
     <Router>
         <div>
             <Route exact path="/" component={App} /> 
-            <Route path="/Cellar" component={Cellar} />
+            <Route path="/CellarList" component={CellarList} />
             <Route path="/Pipes" component={Pipes} />
             <Route path="/SignIn" component={SignIn} />
         </div>
