@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import NavBar from '../NavBar/NavBar';
-import Footer from '../Footer/Footer';
 import classes from './Cellar.css';
-// import CellarList from '../CellarList/CellarList';
+
 
 const imageStyle = {
     width: 150,
@@ -31,20 +29,21 @@ class Cellar extends Component{
     render() {
     return(
         this.state.cellarData.map((data, index) => {
-            return <div className={classes.Cellar}>
+            return <div className={classes.Cellar} key={data.id}>
                      <div className={classes.container}>
                             <img 
                               src={data.image} 
-                              alt ="what ever dude!"
-                              style={imageStyle}/>
+                              alt ="pipe tobacco"
+                              style={imageStyle}                          
+                              />
                         <ul>
-                            <li key={data.id}>{data.blend}</li>
-                            <li key={data.id}>{data.brand}</li>
-                            <li key={data.id}>{data.weight} lbs</li>
-                            <li key={data.id}>{data.age} years</li>
-                            <li key={data.id}>{data.purchased.slice(0,10)}</li>
-                            <li key={data.id}>{data.available ? 'true' : 'false' }</li>
-                            <li key={data.id}>{data.rating} out of 5 stars.</li>
+                            <li>{data.blend}</li>
+                            <li>{data.brand}</li>
+                            <li>{data.weight} lbs</li>
+                            <li>{data.age} years</li>
+                            <li>{data.purchased.slice(0,10)}</li>
+                            <li>{data.available ? 'true' : 'false' }</li>
+                            <li>{data.rating} out of 5 stars.</li>
                             <li>${data.price}</li>
                         </ul>
                       </div>         

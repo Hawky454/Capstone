@@ -22,3 +22,7 @@
     margin: auto;
     box-shadow: 4px 4px 10px;
 }
+
+.container:hover {
+    transform: scale(0.98);
+}
