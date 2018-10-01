@@ -1,20 +1,20 @@
 
-.Cellar {
+.PipeList {
     margin-bottom: 15px;
 }
 
-.cellarImage {
-    width: 200px;
+.PipeList ul{
+    list-style: none;
+}
+
+.pipesImage {
+    box-shadow: 4px 4px 10px;
+    margin-top: 22px;
+    width: 300px;
     height: 200px;
     margin-left: 44px;
     border-radius: 2px;
-    box-shadow: 4px 4px 10px;
-    margin-top: 22px;
-}
 
-
-.Cellar ul{
-    list-style: none;
 }
 
 .container {
@@ -27,7 +27,7 @@
     color: black;
 }
 
-.cellarImage:hover {
+.pipesImage:hover {
     transform: scale(0.98);
 }
 
@@ -38,7 +38,7 @@
    margin: auto;
 }
 
-.Cellar button {
+.PipeList button {
     height: 40px;
     width: 100px;
     margin-left: 20px;
@@ -48,8 +48,7 @@
     /* border: none; */
 }
 
-.Cellar button:hover {
+.PipeList button:hover {
     background-color: #f7f7df;
     transform: scale(.95);
-
 }
