@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Cellar.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -44,9 +45,9 @@ class Cellar extends Component {
                             <li>Rating: {data.rating} out of 5 stars.</li>
                         </ul>
                         <div className={classes.btnContainer}>
-                            <button>add</button>
+                            <Link to="/CellarAddForm"><button>add</button></Link>
                             <button>delete</button>
-                            <button>Compare Price</button> 
+                            <button>Compare</button> 
                             {/* //! will want a fetch call to ebay here */}
                         </div>
                       </div>         

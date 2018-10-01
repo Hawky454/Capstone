@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import classes from './PipeList.css';
 
 
@@ -55,9 +56,9 @@ class PipeList extends Component {
                                 <li>Rating: {data.rating} out of 5 stars.</li>
                             </ul>
                             <div className={classes.btnContainer}>
-                                <button>add</button>
+                                <Link to="/PipesAddForm"><button>add</button></Link>
                                 <button>delete</button>
-                                <button>Compare Price</button> 
+                                <button>Compare</button> 
                                 {/* //! will want a fetch call to ebay here */}
                             </div>
                           </div>         
