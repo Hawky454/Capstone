@@ -23,7 +23,7 @@ class PipeList extends Component {
 
     
 
-    componentWillMount() {
+    componentDidMount() {
         fetch('api/pipes/')
             .then(res => res.json())
             .then(data => this.setState({

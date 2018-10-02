@@ -38,12 +38,12 @@ class SignIn extends Component {
                 <h2 className="sign-in">sign In</h2>
                 <div className="form-group">
                   <label htmlFor="exampleInputEmail1">Email address</label>
-                  <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                  <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" autoComplete="username-email"/>
                   <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div className="form-group">
                   <label htmlFor="exampleInputPassword1">Password</label>
-                  <input type="password" className="form-control" id="InputPassword1" placeholder="Password" />
+                  <input type="password" className="form-control" id="InputPassword1" placeholder="Password" autoComplete="current-password"/>
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
               </form>
