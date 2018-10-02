@@ -38,10 +38,8 @@ class Cellar extends Component {
                             <li>Brand: {data.brand}</li>
                             <li>Weight: {data.weight} lbs</li>
                             <li>Age: {data.age} years</li>
-                            {/* <li>Purchased: {data.purchased.slice(0,10)}</li> */}
-                            {/* <li>Available: {data.available ? 'true' : 'false (frowny face)' }</li> */}
-                            <li>Purchased:{data.purchased}</li>
-                            <li>Available: {data.available}</li>
+                            <li>Purchased: {data.purchased.slice(0,10)}</li>
+                            <li>Available: {data.available ? 'true' : 'false (frowny face)' }</li>
                             <li>Price: ${data.price}</li>
                             <li>Source: {data.source}</li>
                             <li>Rating: {data.rating} out of 5 stars.</li>
