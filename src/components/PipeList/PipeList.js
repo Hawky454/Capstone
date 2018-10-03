@@ -32,6 +32,31 @@ class PipeList extends Component {
                 () => console.log('pipes data fetched...:', data)));
     }
 
+    removePipeEntry = (id) => {
+        let response = prompt('ARE YOU SURE YOU WANT TO PERFORM THIS ACTION? Type Y or N');
+        if(response === 'n' || response === 'N') {
+            return
+        } else {
+        console.log('this is the delete button plus the array of pipeData:', this);
+        let pipeData = this.state.pipeData;
+        let pipe = pipeData.find((pipeEntry) => {
+            return pipeEntry.id === id;
+        });
+        console.log(pipe);
+        let request = new Request('api/pipes/' + id, {
+            method: 'DELETE',
+        });
+        fetch(request)
+          .then((res) => {
+              res.json()
+                .then((data) => {
+                    console.log(data)
+                });
+            
+          });
+        };
+    };
+
 
 
     render() { 
@@ -57,7 +82,7 @@ class PipeList extends Component {
                             </ul>
                             <div className={classes.btnContainer}>
                                 <Link to="/PipesAddForm"><button>add</button></Link>
-                                <button>delete</button>
+                                <button onClick={this.removePipeEntry.bind(this, data.id)}>delete</button>
                                 <button>Compare</button> 
                                 {/* //! will want a fetch call to ebay here */}
                             </div>

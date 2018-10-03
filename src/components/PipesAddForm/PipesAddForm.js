@@ -20,13 +20,6 @@ class PipesAddForm extends Component {
          }
     }
 
-    componentDidMount() {
-      this.addPipes();
-    }
-
-
-
-
 
     addPipes = (event) => {
       event.preventDefault();
