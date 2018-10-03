@@ -4,6 +4,7 @@ import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import './CellarAddForm.css';
 
+
 class CellarAddForm extends Component {
     constructor(props) {
         super(props);
@@ -19,6 +20,22 @@ class CellarAddForm extends Component {
          source: '',
          rating: null
         }
+      }
+
+      clearCellarForm = () =>{
+        this.setState({
+          image: '',
+          age: null,
+          brand: '',
+          price: null,
+          blend: '',
+          weight: null,
+          purchased: '',
+          available: false,
+          source: '',
+          rating: null
+        })
+        console.log('is this working?')
       }
       
 
@@ -53,6 +70,9 @@ class CellarAddForm extends Component {
            });
          });
       }
+
+
+     
     
     
     
@@ -72,7 +92,7 @@ class CellarAddForm extends Component {
         return ( 
             <div>
             <NavBar />
-            <form ref="cellarAdd" className="add" method="POST">
+            <form ref="cellarAddForm" className="add" method="POST">
               <section id="form-card" className="form-card hidden">
                 <section className="form-row">
                   <section className="form-group col-md-6">
@@ -118,7 +138,7 @@ class CellarAddForm extends Component {
                     <input type="text" ref="rating" value={this.state.value} onChange={this.handleChange} className="form-control" placeholder="Rating (1 - 5)" name="rating"/>
                   </section>
                 </section>
-                <button onClick={this.addTobacco} type="submit" className="btn btn-primary">Add Blend!</button>
+              <button onClick={this.addTobacco} onSubmit={() => this.clearCellarForm} type="submit" className="btn btn-primary">Add Blend!</button>
                 <Link to="/CellarList"><button style={myBtn}>Back &rarr;</button></Link>
               </section>
             </form>
