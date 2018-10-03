@@ -12,6 +12,8 @@ class Cellar extends Component {
         }
     }
 
+    
+
     //! Still very much playing around with this component... think maybe this call should be done when a button is clicked or something of that nature... idears
     componentDidMount() {
         fetch('api/cellar/')
@@ -20,6 +22,25 @@ class Cellar extends Component {
                     cellarData: data
                 },
                 () => console.log('cellar data fetched...:', data)));
+    }
+
+    removeCellarEntry = (id) => {
+        console.log('this is the delete button plust the array of cellarData:', this);
+        let cellarData = this.state.cellarData;
+        let tobacco = cellarData.find((cellarEntry) => {
+            return cellarEntry.id === id;
+        });
+        console.log(tobacco);
+        let request = new Request('api/cellar/' + id, {
+            method: 'DELETE',
+        });
+        fetch(request)
+          .then((res) => {
+              res.json()
+                .then((data) => {
+                    console.log(data)
+                })
+          })
     }
 
     
@@ -46,7 +67,7 @@ class Cellar extends Component {
                         </ul>
                         <div className={classes.btnContainer}>
                             <Link to="/CellarAddForm"><button>add</button></Link>
-                            <button>delete</button>
+                            <button onClick={this.removeCellarEntry.bind(this, data.id)} >delete</button>
                             <button>Compare</button> 
                             {/* //! will want a fetch call to ebay here */}
                         </div>

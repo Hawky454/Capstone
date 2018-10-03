@@ -20,6 +20,10 @@ class PipesAddForm extends Component {
          }
     }
 
+    componentDidMount() {
+      this.addPipes();
+    }
+
 
 
 
@@ -111,7 +115,7 @@ class PipesAddForm extends Component {
                     <input type="text" ref="rating" value={this.state.value} className="form-control" placeholder="Rating" name="rating"/>
                   </section>
                   </section>
-                  <button onClick={this.addPipes} type="submit" className="btn btn-primary">Add Blend!</button> <br/>
+                  <button onClick={this.addPipes} type="submit" className="btn btn-primary">Add Pipe!</button> <br/>
                   <Link to="/Pipes"><button style={myBtn} >Back &rarr;</button></Link>
                 </section>
               </form>
