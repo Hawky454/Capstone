@@ -61,6 +61,9 @@ class PipesAddForm extends Component {
             console.log(newPipeData);
           });
         });
+
+        //! think this is working but I'm sure it's not best practice
+        window.location.reload();
         this.clearPipeForm();
      }
 
@@ -90,8 +93,7 @@ class PipesAddForm extends Component {
           color: 'white',
           textDecoration: 'none',
           width: 100,
-          height: 80,
-          border: '1px solid red'
+          height: 80
         }
 
 

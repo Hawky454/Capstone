@@ -66,7 +66,9 @@ class CellarAddForm extends Component {
              console.log(newCellarData);
            });
          });
-         this.clearCellarForm(event);
+         //! Don't think this is best practice and either is the router on the form button but it's a quick fix for now.
+         window.location.reload()
+        //  this.clearCellarForm(event);
         }
 
 
