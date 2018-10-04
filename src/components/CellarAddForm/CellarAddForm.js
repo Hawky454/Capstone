@@ -4,44 +4,41 @@ import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import './CellarAddForm.css';
 
-
 class CellarAddForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
          image: '',
-         age: null,
+         age: '',
          brand: '',
-         price: null,
+         price: '',
          blend: '',
-         weight: null,
+         weight: '',
          purchased: '',
-         available: false,
+         available: '',
          source: '',
-         rating: null
+         rating: ''
         }
       }
 
-      clearCellarForm = () =>{
+      clearCellarForm = (event) => {
         this.setState({
-          image: '',
-          age: null,
-          brand: '',
-          price: null,
-          blend: '',
-          weight: null,
-          purchased: '',
-          available: false,
-          source: '',
-          rating: null
-        })
-        console.log('is this working?')
+        image: '',
+        age: '',
+        brand: '',
+        price: '',
+        blend:'',
+        weight: '',
+        purchased: '',
+        available: '',
+        source: '',
+        rating: ''
+        });
       }
       
 
-     handleChange = (event) => {
-       console.log(event.target.value);
-     }
+
+    
     
      addTobacco = (event) => {
        event.preventDefault();
@@ -69,7 +66,28 @@ class CellarAddForm extends Component {
              console.log(newCellarData);
            });
          });
-      }
+         this.clearCellarForm(event);
+        }
+
+
+     handleChange = (event) => {
+      this.setState({
+        [event.target.name]: event.target.value,
+        [event.target.age]: event.target.value,
+        [event.target.brand]: event.target.value,
+        [event.target.price]: event.target.value,
+        [event.target.blend]:event.target.value,
+        [event.target.weight]: event.target.value,
+        [event.target.purchased]: event.target.value,
+        [event.target.available]: event.target.value,
+        [event.target.source]: event.target.value,
+        [event.target.ratitng]: event.target.value
+      });
+       
+    }
+
+  
+
 
 
      
@@ -97,48 +115,48 @@ class CellarAddForm extends Component {
                 <section className="form-row">
                   <section className="form-group col-md-6">
                     <label htmlFor="image">Image URL</label>
-                    <input type="text" ref="image" value={this.state.value} onChange={this.handleChange} className="form-control" placeholder="Image URL" name="image"/>
+                    <input type="text" ref="image" value={this.state.image} onChange={this.handleChange} className="form-control" placeholder="Image URL" name="image"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="age">Age</label>
-                    <input type="text" ref="age" value={this.state.value} onChange={this.handleChange} className="form-control" placeholder="Age" name="age"/>
+                    <input type="text" ref="age" value={this.state.age} onChange={this.handleChange} className="form-control" placeholder="Age" name="age"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="brand">Brand</label>
-                    <input type="text" ref="brand" value={this.state.value} onChange={this.handleChange} className="form-control" placeholder="Brand" name="brand"/>
+                    <input type="text" ref="brand" value={this.state.brand} onChange={this.handleChange} className="form-control" placeholder="Brand" name="brand"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="price">Price</label>
-                    <input type="text" ref="price" value={this.state.value} onChange={this.handleChange} className="form-control" placeholder="Price" name="price"/>
+                    <input type="text" ref="price" value={this.state.price} onChange={this.handleChange} className="form-control" placeholder="Price" name="price"/>
                   </section>
                 </section>
                 <section className="form-row">
                   <section className="form-group col-md-6">
                     <label htmlFor="blend">Blend</label>
-                    <input type="text" ref="blend" value={this.state.value} onChange={this.handleChange} className="form-control" placeholder="Blend" name="blend"/>
+                    <input type="text" ref="blend" value={this.state.blend} onChange={this.handleChange} className="form-control" placeholder="Blend" name="blend"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="weight">Weight</label>
-                    <input type="text" ref="weight" value={this.state.value} onChange={this.handleChange} className="form-control" placeholder="Weight" name="weight"/>
+                    <input type="text" ref="weight" value={this.state.weight} onChange={this.handleChange} className="form-control" placeholder="Weight" name="weight"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="purchased">Purchase Date</label>
-                    <input type="text" ref="purchased" value={this.state.value} onChange={this.handleChange} className="form-control" placeholder="Purchase Date" name="purchased"/>
+                    <input type="text" ref="purchased" value={this.state.purchased} onChange={this.handleChange} className="form-control" placeholder="YYYY-MM-DD" name="purchased"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="available">Available</label>
-                    <input type="text" ref="available" value={this.state.value} onChange={this.handleChange} className="form-control" placeholder="Available" name="available"/>
+                    <input type="text" ref="available" value={this.state.available} onChange={this.handleChange} className="form-control" placeholder="True/False" name="available"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="source">Source</label>
-                    <input type="text" ref="source" value={this.state.value} onChange={this.handleChange} className="form-control" placeholder="Source" name="source"/>
+                    <input type="text" ref="source" value={this.state.source} onChange={this.handleChange} className="form-control" placeholder="Source" name="source"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="rating">Rating (1 - 5)</label>
-                    <input type="text" ref="rating" value={this.state.value} onChange={this.handleChange} className="form-control" placeholder="Rating (1 - 5)" name="rating"/>
+                    <input type="text" ref="rating" value={this.state.rating} onChange={this.handleChange} className="form-control" placeholder="Rating (1 - 5)" name="rating"/>
                   </section>
                 </section>
-              <button onClick={this.addTobacco} onSubmit={() => this.clearCellarForm} type="submit" className="btn btn-primary">Add Blend!</button>
+              <button onClick={this.addTobacco} type="submit" className="btn btn-primary">Add Blend!</button>
                 <Link to="/CellarList"><button style={myBtn}>Back &rarr;</button></Link>
               </section>
             </form>

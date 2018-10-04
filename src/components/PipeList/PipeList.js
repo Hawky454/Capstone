@@ -31,10 +31,10 @@ class PipeList extends Component {
                 },
                 () => console.log('pipes data fetched...:', data)));
     }
-
+//!! when this is back stop reversing
     removePipeEntry = (id) => {
-        let response = prompt('ARE YOU SURE YOU WANT TO PERFORM THIS ACTION? Type Y or N');
-        if(response === 'n' || response === 'N') {
+        let response = window.confirm('ARE YOU SURE YOU WANT TO DELETE THIS ENTRY?');
+        if(!response ) {
             return
         } else {
         console.log('this is the delete button plus the array of pipeData:', this);

@@ -83,7 +83,7 @@ class PipesAddForm extends Component {
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="year">Year</label>
-                    <input type="text" ref="year" value={this.state.value} className="form-control" placeholder="Year" name="year"/>
+                    <input type="text" ref="year" value={this.state.value} className="form-control" placeholder="Year (YYYY)" name="year"/>
                   </section>
                 </section>
                 <section className="form-row">
