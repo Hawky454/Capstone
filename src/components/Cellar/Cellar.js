@@ -52,6 +52,9 @@ class Cellar extends Component {
             
           });
         };
+        //todo - I need to update state to show that the deletion took place without having to re-load the page
+        //! The following will temporarliy do the trick.
+      window.location.reload();
     };
 
     

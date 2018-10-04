@@ -21,6 +21,10 @@ class PipeList extends Component {
         }
     }
 
+    updateState = (pipeIndex, id) => {
+       
+    }
+
     
 
     componentDidMount() {
@@ -31,6 +35,8 @@ class PipeList extends Component {
                 },
                 () => console.log('pipes data fetched...:', data)));
     }
+
+
 //!! when this is back stop reversing
     removePipeEntry = (id) => {
         let response = window.confirm('ARE YOU SURE YOU WANT TO DELETE THIS ENTRY?');
@@ -50,11 +56,14 @@ class PipeList extends Component {
           .then((res) => {
               res.json()
                 .then((data) => {
-                    console.log(data)
+                    console.log(data);
                 });
             
           });
         };
+      //todo - I need to update state to show that the deletion took place without having to re-load the page
+      //! The following will temporarliy do the trick.
+      window.location.reload();
     };
 
 

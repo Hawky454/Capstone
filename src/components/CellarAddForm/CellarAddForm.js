@@ -73,15 +73,6 @@ class CellarAddForm extends Component {
      handleChange = (event) => {
       this.setState({
         [event.target.name]: event.target.value,
-        [event.target.age]: event.target.value,
-        [event.target.brand]: event.target.value,
-        [event.target.price]: event.target.value,
-        [event.target.blend]:event.target.value,
-        [event.target.weight]: event.target.value,
-        [event.target.purchased]: event.target.value,
-        [event.target.available]: event.target.value,
-        [event.target.source]: event.target.value,
-        [event.target.ratitng]: event.target.value
       });
        
     }
@@ -99,14 +90,12 @@ class CellarAddForm extends Component {
     //possible colorz for button: #494942, #808080
     
     render() { 
+
         const myBtn = {
-            height: 48,
-            width: 130.89,
-            borderRadius: 5,
-            marginLeft: 138,
-            backgroundColor: '#494942',
-            color: '#f7f7df'
+           color: 'white',
+           textDecoration: 'none'
         }
+
         return ( 
             <div>
             <NavBar />
@@ -156,8 +145,7 @@ class CellarAddForm extends Component {
                     <input type="text" ref="rating" value={this.state.rating} onChange={this.handleChange} className="form-control" placeholder="Rating (1 - 5)" name="rating"/>
                   </section>
                 </section>
-              <button onClick={this.addTobacco} type="submit" className="btn btn-primary">Add Blend!</button>
-                <Link to="/CellarList"><button style={myBtn}>Back &rarr;</button></Link>
+                <button onClick={this.addTobacco} type="submit" className="btn btn-primary"><Link to="/CellarList" style={myBtn} >Add Blend!</Link></button>
               </section>
             </form>
             <Footer />

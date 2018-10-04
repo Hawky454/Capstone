@@ -11,13 +11,28 @@ class PipesAddForm extends Component {
           brand: '',
           pipemaker: '',
           year: '',
-          price: null,
-          smooth: false,
-          sandblasted: false,
-          available: false,
+          price: '',
+          smooth: '',
+          sandblasted: '',
+          available: '',
           source: '',
-          rating: null
+          rating: ''
          }
+    }
+
+    clearPipeForm = (event) => {
+      this.setState({
+       image: '',
+       brand: '',
+       pipemaker: '',
+       year: '',
+       price: '',
+       smooth: '',
+       sandblasted: '',
+       available: '',
+       source: '',
+       rating: ''
+      });
     }
 
 
@@ -46,19 +61,37 @@ class PipesAddForm extends Component {
             console.log(newPipeData);
           });
         });
+        this.clearPipeForm();
      }
 
 
 
+     handleChange = (event) => {
+       this.setState({
+         [event.target.name]: event.target.value,
+       });
+       console.log('[PipesAddForm] state:',this.state);
+     }
+
+   
+
+
 
     render() { 
+        // const myBtn = {
+        //     height: 48,
+        //     width: 130.89,
+        //     borderRadius: 5,
+        //     marginTop: 10,
+        //     backgroundColor: '#494942',
+        //     color: '#f7f7df'
+        // }
         const myBtn = {
-            height: 48,
-            width: 130.89,
-            borderRadius: 5,
-            marginTop: 10,
-            backgroundColor: '#494942',
-            color: '#f7f7df'
+          color: 'white',
+          textDecoration: 'none',
+          width: 100,
+          height: 80,
+          border: '1px solid red'
         }
 
 
@@ -71,45 +104,44 @@ class PipesAddForm extends Component {
                 <section className="form-row">
                   <section className="form-group col-md-6">
                     <label htmlFor="imgUrl">Image URL</label>
-                    <input type="text" ref="image" value={this.state.value} className="form-control" placeholder="Image URL" name="imgUrl"/>
+                    <input type="text" ref="image" value={this.state.image} onChange={this.handleChange} className="form-control" placeholder="Image URL" name="image"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="brand">Brand</label>
-                    <input type="text" ref="brand" value={this.state.value} className="form-control" placeholder="Brand" name="brand"/>
+                    <input type="text" ref="brand" value={this.state.brand} onChange={this.handleChange} className="form-control" placeholder="Brand" name="brand"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="Pipe Maker">Pipe Maker</label>
-                    <input type="text" ref="pipemaker" value={this.state.value} className="form-control" placeholder="Pipe Maker" name="pipe maker"/>
+                    <input type="text" ref="pipemaker" value={this.state.pipemaker} onChange={this.handleChange} className="form-control" placeholder="Pipe Maker" name="pipemaker"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="year">Year</label>
-                    <input type="text" ref="year" value={this.state.value} className="form-control" placeholder="Year (YYYY)" name="year"/>
+                    <input type="text" ref="year" value={this.state.year} onChange={this.handleChange} className="form-control" placeholder="Year (YYYY)" name="year"/>
                   </section>
                 </section>
                 <section className="form-row">
                   <section className="form-group col-md-6">
                     <label htmlFor="price">Price</label>
-                    <input type="text" ref="price" value={this.state.value} className="form-control" placeholder="Price" name="price"/>
+                    <input type="text" ref="price" value={this.state.price} onChange={this.handleChange} className="form-control" placeholder="Price" name="price"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="smooth">Smooth?</label>
-                    <input type="text" ref="smooth" value={this.state.value} className="form-control" placeholder="True/False" name="smooth"/>
+                    <input type="text" ref="smooth" value={this.state.smooth} onChange={this.handleChange} className="form-control" placeholder="True/False" name="smooth"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="sandblasted">Sandblasted?</label>
-                    <input type="text" ref="sandblasted" value={this.state.value} className="form-control" placeholder="True/False" name="sandblasted"/>
+                    <input type="text" ref="sandblasted" value={this.state.sandblasted} onChange={this.handleChange} className="form-control" placeholder="True/False" name="sandblasted"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="source">Source</label>
-                    <input type="text" ref="source" value={this.state.value} className="form-control" placeholder="Source" name="source"/>
+                    <input type="text" ref="source" value={this.state.source} onChange={this.handleChange} className="form-control" placeholder="Source" name="source"/>
                   </section>
                   <section className="form-group col-md-6">
                     <label htmlFor="rating">Rating (1 -5)</label>
-                    <input type="text" ref="rating" value={this.state.value} className="form-control" placeholder="Rating" name="rating"/>
+                    <input type="text" ref="rating" value={this.state.rating} onChange={this.handleChange} className="form-control" placeholder="Rating" name="rating"/>
                   </section>
                   </section>
-                  <button onClick={this.addPipes} type="submit" className="btn btn-primary">Add Pipe!</button> <br/>
-                  <Link to="/Pipes"><button style={myBtn} >Back &rarr;</button></Link>
+                  <button onClick={this.addPipes} type="submit" className="btn btn-primary"><Link to="/Pipes" style={myBtn}>Add Pipe!</Link></button>
                 </section>
               </form>
             <Footer />
