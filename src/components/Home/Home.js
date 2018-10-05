@@ -5,20 +5,21 @@ const Home = (props) => {
     
     return(
         <div className={classes.Home}>
-          <h1>Fucking focus on the server and not the style! <hr/> Today, Thursday, 9-27-18</h1>
-          <h1>What the what?</h1>
-          <h1>What the what?</h1>
-          <h1>What the what?</h1>
-          <h1>What the what?</h1>
-          <div className={classes.image}>
+          <div>
+            <section className={classes.rectangleTop}>
+              <p>The Tobacco Cellar</p>
+            </section>
             <div className={classes.container}>
               <section className={classes.card1}>
-                 <p>Keep track of your entire collection!</p>
               </section>
               <section className={classes.card2}>
-                 <p>And your pipe tobacco too!</p>
+              </section>
+              <section className={classes.card3}>
               </section>
             </div>
+            <section className={classes.rectangleBottom}>
+              <p>Is finally here!</p>
+            </section>
           </div>
         </div>
     );

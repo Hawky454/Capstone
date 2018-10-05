@@ -32,6 +32,10 @@ class SignUp extends Component {
                         <input type="email" className="form-control" id="inputEmail4" autoComplete="username email" placeholder="Email"/>
                       </section>
                       <section className="form-group col-md-6">
+                        <label htmlFor="username">Username</label>
+                        <input type="text" className="form-control" id="username" autoComplete="username" placeholder="Username"/>
+                      </section>
+                      <section className="form-group col-md-6">
                         <label htmlFor="inputPassword4">Password</label>
                         <input type="password" className="form-control" id="inputPassword4" autoComplete="new-password" placeholder="Password"/>
                       </section>

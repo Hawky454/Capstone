@@ -14,11 +14,8 @@
 
 
 
+
 .Home {
-    /* margin-top: 125px;
-    margin-bottom: 125px;
-    margin-left: 165px;
-    margin-right: 165px; */
     margin: 125px 165px;
 }
 
@@ -27,38 +24,85 @@
 }
 
 .card1 {
-    width: 550px;
-    height: 550px;
-    border: 3px solid black;
+    width: 350px;
+    height: 350px;
+    border: 1px solid black;
     border-radius: 5px;
     box-shadow: 5px 10px 8px #888888;
     margin: auto;
-    background: url('../../assets/swirl_pattern.png');
+    background: url('../../assets/four-pipes.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 25vw;
+    min-height: 25vh;
+
 }
 
 .card2 {
-    width: 550px;
-    height: 550px;
-    border: 3px solid black;
+    width: 350px;
+    height: 350px;
+    border: 1px solid black;
     border-radius: 5px;
     box-shadow: 5px 10px 8px #888888;
     margin: auto;
-    background: url('../../assets/upfeathers.png') center;
-    /* -webkit-background-size: cover; */
-    /* -moz-background-size: cover; */
-    /* -o-background-size: cover; */
-    /* background-size: cover; */
+    background: url('../../assets/my-pipes.jpg') center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 25vw;
+    min-height: 25vh;
+}
+
+.card3 {
+    width: 350px;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 10px 8px #888888;
+    margin: auto;
+    background: url('../../assets/pipe-tobacco.jpg') center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 25vw;
+    min-height: 25vh;
+}
+
+.rectangleTop {
+    width: 1100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 5px 10px 8px #888888;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    background: url('../../assets/upfeathers.png');
+    text-align: center;
 }
 
 
-.Home p {
-    color: black;
-    background: white;
-    border: 2px solid black;
+.rectangleBottom {
+    width: 1100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 5px 10px 8px #888888;
+    margin-top: 20px;
+    margin-left: 5px;
+    background: url('../../assets/upfeathers.png');
     text-align: center;
-    font-weight: bolder;
-    font-size: 24px;
-    font-family: 'Bowlby One SC', cursive;
+}
+
+.Home p {
+  margin-top: 35px;
+  font-size: 30px;
 }
 
 

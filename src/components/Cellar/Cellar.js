@@ -12,9 +12,6 @@ class Cellar extends Component {
         }
     }
 
-    
-
-    //! Still very much playing around with this component... think maybe this call should be done when a button is clicked or something of that nature... idears
     componentDidMount() {
         fetch('api/cellar/')
             .then(res => res.json())
@@ -22,12 +19,7 @@ class Cellar extends Component {
                     cellarData: data
                 },
                 () => console.log('cellar data fetched...:', data)));
-
-
     }
-
-   
-  
 
     removeCellarEntry = (id) => {
         let response = (window.confirm('ARE YOU SURE YOU WANT TO DELETE THIS ENTRY?'));
