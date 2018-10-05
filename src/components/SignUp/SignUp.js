@@ -7,59 +7,114 @@ class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedId: ''
+      email: '',
+      username: '',
+      password: '',
+      password2:'',
+      address: '',
+      city: '',
+      state: '',
+      zip: ''
     }
   }
-  
-  
-  dropDownChanged = (event) => {
+
+  //! SAFE ZONE ONCE THIS IS DELETED
+
+
+  handleChange = (event) => {
     this.setState({
-      selectedId: event.target.value
+      [event.target.name]: event.target.value,
     });
-    console.log(event.target.value);
+    console.log('[SignUp.js] state:', this.state);
   }
+
+
+  addUsers = (event) => {
+    event.preventDefault();
+    let newUserData = {
+      email: this.refs.email.value,
+      username: this.refs.username.value,
+      password: this.refs.password.value,
+      password2: this.refs.password2.value,
+      address: this.refs.address.value,
+      city: this.refs.city.value,
+      state: this.refs.state.value,
+      zip: this.refs.zip.value
+    }
+    let request = new Request('api/users', {
+      method: 'POST',
+      headers: new Headers({'Content-Type': 'application/json'}),
+      body: JSON.stringify(newUserData)
+    });
+    fetch(request)
+      .then((res) => {
+        res.json()
+          .then((newUserData) => {
+            console.log(newUserData)
+          });
+      });
+      this.setState({
+        email: '',
+        username: '',
+        password: '',
+        password2:'',
+        address: '',
+        city: '',
+        state: '',
+        zip: ''
+      });
+      alert('Thank you for signing up!');
+  }
+ 
+
+
+  
+    // not sure if I should use or not
+    // window.location.reload();
+
+
 
 
       render() {
         return(
           <div>
             <NavBar /> 
-                  <form id="form-card" className="form-card hidden">
+                  <form ref="userAddForm" id="form-card" className="addUsers" method="POST">
                     <h2 className="sign-up-heading">Sign Up</h2>
                     <section className="form-row">
                       <section className="form-group col-md-6">
-                        <label htmlFor="inputEmail4">Email</label>
-                        <input type="email" className="form-control" id="inputEmail4" autoComplete="username email" placeholder="Email"/>
+                        <label htmlFor="email">Email</label>
+                        <input type="email" ref="email" value={this.state.email} onChange={this.handleChange}  className="form-control" id="inputEmail4" autoComplete="email" placeholder="Email" name="email"/>
                       </section>
                       <section className="form-group col-md-6">
                         <label htmlFor="username">Username</label>
-                        <input type="text" className="form-control" id="username" autoComplete="username" placeholder="Username"/>
+                        <input type="text" ref="username" value={this.state.username} onChange={this.handleChange} className="form-control" id="username" autoComplete="username" placeholder="Username" name="username"/>
                       </section>
                       <section className="form-group col-md-6">
-                        <label htmlFor="inputPassword4">Password</label>
-                        <input type="password" className="form-control" id="inputPassword4" autoComplete="new-password" placeholder="Password"/>
+                        <label htmlFor="password">Password</label>
+                        <input type="password" ref="password" value={this.state.password} onChange={this.handleChange} className="form-control" id="inputPassword4" autoComplete="new-password" placeholder="Password" name="password"/>
                       </section>
                       <section className="form-group col-md-6">
-                        <label htmlFor="inputPassword5">Re-enter Password</label>
-                        <input type="password" className="form-control" id="inputPassword5" autoComplete="new-password" placeholder="Password"/>
+                        <label htmlFor="password2">Re-enter Password</label>
+                        <input type="password" ref="password2"  value={this.state.password2} onChange={this.handleChange} className="form-control" id="inputPassword5" autoComplete="new-password" placeholder="Password" name="password2"/>
                       </section>
                       </section>
                       <section className="form-group">
-                        <label htmlFor="inputAddress">Address</label>
-                        <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"/>
+                        <label htmlFor="address">Address</label>
+                        <input type="text" ref="address" value={this.state.address} onChange={this.handleChange} className="form-control" id="inputAddress" placeholder="1234 Main St" name="address"/>
                       </section>
-                      <section className="form-group">
-                        <label htmlFor="inputAddress2">Address 2</label>
+                      {/* <section className="form-group">
+                        <label htmlFor="inputAddress2">Suite No.</label>
                         <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
-                      </section>
+                      </section> */}
                       <section className="form-row">
                       <section className="form-group col-md-6">
-                        <label htmlFor="inputCity">City</label>
-                        <input type="text" className="form-control" id="inputCity" placeholder="Austin"/>
+                        <label htmlFor="city">City</label>
+                        <input type="text" ref="city" value={this.state.city} onChange={this.handleChange} className="form-control" id="inputCity" placeholder="Austin" name="city"/>
                       </section>
                       <section className="form-group col-md-4">
-                        <label htmlFor="inputState">State</label>
-                        <select id="inputState" className="form-control" value={this.selectedId} onChange={this.dropDownChanged}>
+                        <label htmlFor="state">State</label>
+                        <select id="state" ref="state" value={this.state.state} onChange={this.handleChange} className="form-control" name="state">
                       <option>Choose...</option>
                       <option>State</option>
                         <option value="AL">Alabama</option>
@@ -116,15 +171,15 @@ class SignUp extends Component {
                     </select>
                     </section>
                     <section className="form-group col-md-2">
-                      <label htmlFor="inputZip">Zip</label>
-                      <input type="text" className="form-control zip" id="inputZip" placeholder="Zip"/>
+                      <label htmlFor="zip">Zip</label>
+                      <input type="text" ref="zip" value={this.state.zip} onChange={this.handleChange} className="form-control zip" id="inputZip" placeholder="Zip" name="zip"/>
                     </section>
                     </section>
                     <section className="form-group">
                     <section className="form-check">
                     </section>
                     </section>
-                    <button type="submit" className="btn btn-primary">Sign Up</button>
+                    <button onClick={this.addUsers} type="submit" className="btn btn-primary">Sign Up</button>
                 </form>
             <Footer />
          </div>
