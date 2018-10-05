@@ -1,1 +1,7 @@
 /* //!Mainly using Bootstrap to style my forms BUT when I need to add my own styles, it's best to use inline styles to override bootstrap.*/
+
+
+.CellarAddForm.add {
+/* //todo need to figure out how to maked these forms fixed without them conflicting with the footer, also need to figure out why the inputs aren't going behind the navbar like all other elements */
+
+}

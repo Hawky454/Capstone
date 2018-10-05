@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
-import './CellarAddForm.css';
+import classes from './CellarAddForm.css';
 
 class CellarAddForm extends Component {
     constructor(props) {
@@ -101,7 +101,8 @@ class CellarAddForm extends Component {
         return ( 
             <div>
             <NavBar />
-            <form ref="cellarAddForm" className="add" method="POST">
+            <div className={classes.add}>
+            <form ref="cellarAddForm" method="POST">
               <section id="form-card" className="form-card hidden">
                 <section className="form-row">
                   <section className="form-group col-md-6">
@@ -150,6 +151,7 @@ class CellarAddForm extends Component {
                 <button onClick={this.addTobacco} type="submit" className="btn btn-primary"><Link to="/CellarList" style={myBtn} >Add Blend!</Link></button>
               </section>
             </form>
+          </div>
             <Footer />
           </div>
          );
