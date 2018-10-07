@@ -41,7 +41,7 @@ class SignUp extends Component {
       state: this.refs.state.value,
       zip: this.refs.zip.value
     }
-    let request = new Request('api/users', {
+    let request = new Request('api/users/signup', {
       method: 'POST',
       headers: new Headers({'Content-Type': 'application/json'}),
       body: JSON.stringify(newUserData)
@@ -110,7 +110,7 @@ class SignUp extends Component {
                       <section className="form-row">
                       <section className="form-group col-md-6">
                         <label htmlFor="city">City</label>
-                        <input type="text" ref="city" value={this.state.city} onChange={this.handleChange} className="form-control" id="inputCity" placeholder="Austin" name="city"/>
+                        <input type="text" ref="city" value={this.state.city} onChange={this.handleChange} className="form-control" id="inputCity" placeholder="City" name="city"/>
                       </section>
                       <section className="form-group col-md-4">
                         <label htmlFor="state">State</label>
