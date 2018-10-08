@@ -40,11 +40,11 @@ class SignIn extends Component {
       }
       const request = new Request(AUTH_URL, {
         method: 'POST',
+        mode: 'cors',
         headers: new Headers({
-          'Content-Type': 'application/json',
-          opt: {
-            credentials: 'same-origin'
-          },
+          'Content-Type': 'application/json; charset=utf-8',
+          'credentials': 'include',
+          'crossDomain': true,
         }),
         body: JSON.stringify(userData)
       });
@@ -54,6 +54,7 @@ class SignIn extends Component {
             .then((userData) => {
               console.log('[SignIn.js] userData: ', userData);
             });
+            console.log('userData', userData);
         });
       // window.location.reload();
       this.setState({
@@ -63,17 +64,19 @@ class SignIn extends Component {
     }
                               
 
+    
 
-
-    handleInputChange = (event) => {
+    handleChange = (event) => {
       this.setState({
         [event.target.name]: event.target.value
       });
+
     }
 
     
 
     render() {
+      console.log('state:', this.state);
     return(
         <div>
           <NavBar />
@@ -82,12 +85,12 @@ class SignIn extends Component {
                 <h2 className="sign-in">sign In</h2>
                 <div className="form-group">
                   <label htmlFor="email">Email address</label>
-                  <input type="email" ref="email" value={this.state.email} onChange={this.handleInputChange}  className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" autoComplete="username-email" name="email"/>
+                  <input type="email" ref="email" value={this.state.email} onChange={this.handleChange}  className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" autoComplete="username-email" name="email"/>
                   <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div className="form-group">
                   <label htmlFor="password">Password</label>
-                  <input type="password" ref="password" value={this.state.password} onChange={this.handleInputChange}  className="form-control" id="InputPassword1" placeholder="Password" autoComplete="current-password" name="password"/>
+                  <input type="password" ref="password" value={this.state.password} onChange={this.handleChange}  className="form-control" id="InputPassword1" placeholder="Password" autoComplete="current-password" name="password"/>
                 </div>
                 <button type="submit"  onClick={this.addUser} className="btn btn-primary">Submit</button>
               </form>
