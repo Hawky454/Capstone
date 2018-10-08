@@ -3,6 +3,9 @@ import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import './SignUp.css';
 
+
+
+
 class SignUp extends Component {
   constructor(props) {
     super(props);
@@ -16,16 +19,16 @@ class SignUp extends Component {
       state: '',
       zip: ''
     }
+
   }
 
-  //! SAFE ZONE ONCE THIS IS DELETED
+
 
 
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
     });
-    console.log('[SignUp.js] state:', this.state);
   }
 
 
