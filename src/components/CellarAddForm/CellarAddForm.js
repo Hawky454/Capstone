@@ -36,24 +36,6 @@ class CellarAddForm extends Component {
         }
       }
 
-      clearCellarForm = (event) => {
-        this.setState({
-        image: '',
-        age: '',
-        brand: '',
-        price: '',
-        blend:'',
-        weight: '',
-        purchased: '',
-        available: '',
-        source: '',
-        rating: ''
-        });
-      }
-      
-
-
-    
     
      addTobacco = (event) => {
        event.preventDefault();
@@ -81,9 +63,7 @@ class CellarAddForm extends Component {
              console.log(newCellarData);
            });
          });
-         //! Don't think this is best practice and either is the router on the form button but it's a quick fix for now.
          window.location.reload()
-        //  this.clearCellarForm(event);
         }
 
 
@@ -96,15 +76,6 @@ class CellarAddForm extends Component {
 
   
 
-
-
-     
-    
-    
-    
-    
-    
-    //possible colorz for button: #494942, #808080
     
     render() { 
 

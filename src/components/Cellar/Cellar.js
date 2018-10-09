@@ -55,8 +55,6 @@ class Cellar extends Component {
             
           });
         };
-        //todo - I need to update state to show that the deletion took place without having to re-load the page
-        //! The following will temporarliy do the trick.
       window.location.reload();
     };
 
@@ -85,8 +83,7 @@ class Cellar extends Component {
                         <div className={classes.btnContainer}>
                             <Link to="/CellarAddForm"><button>add</button></Link>
                             <button onClick={this.removeCellarEntry.bind(this, data.id)} >delete</button>
-                            <button>Compare</button> 
-                            {/* //! will want a fetch call to ebay here */}
+                            <a href="https://q3projectdavem.herokuapp.com/#" target="_blank" rel="noopener noreferrer"><button>Chat</button></a> 
                         </div>
                       </div>         
                  </div>

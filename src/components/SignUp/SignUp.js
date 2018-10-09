@@ -89,7 +89,6 @@ class SignUp extends Component {
         state: '',
         zip: ''
       });
-      // alert('Thank you for signing up!');
   }
  
 
@@ -121,10 +120,6 @@ class SignUp extends Component {
                         <label htmlFor="address">Address</label>
                         <input type="text" ref="address" value={this.state.address} onChange={this.handleChange} className="form-control" id="inputAddress" placeholder="1234 Main St" name="address"/>
                       </section>
-                      {/* <section className="form-group">
-                        <label htmlFor="inputAddress2">Suite No.</label>
-                        <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
-                      </section> */}
                       <section className="form-row">
                       <section className="form-group col-md-6">
                         <label htmlFor="city">City</label>

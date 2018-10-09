@@ -35,22 +35,6 @@ class PipesAddForm extends Component {
          }
     }
 
-    clearPipeForm = (event) => {
-      this.setState({
-       image: '',
-       brand: '',
-       pipemaker: '',
-       year: '',
-       price: '',
-       smooth: '',
-       sandblasted: '',
-       available: '',
-       source: '',
-       rating: ''
-      });
-    }
-
-
 
     addPipes = (event) => {
       event.preventDefault();
@@ -77,10 +61,7 @@ class PipesAddForm extends Component {
             console.log(newPipeData);
           });
         });
-
-        //! think this is working but I'm sure it's not best practice
         window.location.reload();
-        // this.clearPipeForm();
      }
 
 

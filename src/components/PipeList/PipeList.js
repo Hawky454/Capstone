@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import classes from './PipeList.css';
 
 
+
 const API_URL = getHostURL();
 const API_PIPES = `${API_URL}/api/pipes/`;
 
@@ -40,7 +41,7 @@ class PipeList extends Component {
     }
 
 
-//!! when this is back stop reversing
+
     removePipeEntry = (id) => {
         let response = window.confirm('ARE YOU SURE YOU WANT TO DELETE THIS ENTRY?');
         if(!response ) {
@@ -64,14 +65,10 @@ class PipeList extends Component {
             
           });
         };
-      //todo - I need to update state to show that the deletion took place without having to re-load the page
-      //! The following will temporarliy do the trick.
       window.location.reload();
     };
 
-    // searchEbay = (event) => {
-    //     fetch()
-    // }
+    
 
 
 
@@ -83,8 +80,7 @@ class PipeList extends Component {
                                 <img 
                                   className={classes.pipesImage}
                                   src={data.image} 
-                                  alt ={data.blend}
-                                //   style={imageStyle}                          
+                                  alt ={data.blend}                          
                                   />
                             <ul>
                                 <li>Brand: {data.brand}</li>
@@ -99,8 +95,7 @@ class PipeList extends Component {
                             <div className={classes.btnContainer}>
                                 <Link to="/PipesAddForm"><button>add</button></Link>
                                 <button onClick={this.removePipeEntry.bind(this, data.id)}>delete</button>
-                                <button onClick={this.searchEbay}>Compare</button> 
-                                {/* //! will want a fetch call to ebay here */}
+                                <a href="https://q3projectdavem.herokuapp.com/#" target="_blank" rel="noopener noreferrer"><button>Chat</button></a> 
                             </div>
                           </div>         
                      </div>

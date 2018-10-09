@@ -7,7 +7,6 @@ import Cellar from '../Cellar/Cellar';
 
 //! this is the actually page that shows, it's all being populated by the Cellar component, originally I would have preferred that the names be reversed but I'm not going to get started on that now.
 
-//? Safe!!!!!!!!!
 class CellarList extends Component{
     
     scrollToTop = (event) => {
