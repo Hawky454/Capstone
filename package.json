@@ -2,6 +2,10 @@
   "name": "capstone",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "10.10.0",
+    "npm": "6.4.1"
+  },
   "dependencies": {
     "ajv": "^6.5.4",
     "autoprefixer": "7.1.6",
