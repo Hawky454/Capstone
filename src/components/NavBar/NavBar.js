@@ -12,7 +12,7 @@ const NavBar = (props) => {
           <Link to="/Pipes"><span className={classes.left}>Pipes</span></Link>
           <section>
             <Link to="/SignUp"><span className={classes.right}>Sign Up</span></Link>
-            <Link to="/SignIn"><span onClick={() => props.clicked} className={classes.right}>Sign In</span></Link>
+            <Link to="/SignIn"><span onClick={() => props.clicked} className={classes.right}>Log In</span></Link>
           </section>
         </div>
     );

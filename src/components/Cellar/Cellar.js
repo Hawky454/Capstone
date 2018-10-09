@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import classes from './Cellar.css';
 import { Link } from 'react-router-dom';
 
+const API_URL = getHostURL();
+const API_CELLAR = `${API_URL}/api/cellar/`;
+
+function getHostURL() {
+  if(window.location.host.indexOf('localhost') !== -1) {
+    return 'http://localhost:8000';
+  } else {
+    return 'Need to put heroku deployed address once I deploy it';
+  }
+}
+
 
 
 class Cellar extends Component {
@@ -13,7 +24,7 @@ class Cellar extends Component {
     }
 
     componentDidMount() {
-        fetch('api/cellar/')
+        fetch(API_CELLAR)
             .then(res => res.json())
             .then(data => this.setState({
                     cellarData: data
@@ -32,7 +43,7 @@ class Cellar extends Component {
             return cellarEntry.id === id;
         });
         console.log(tobacco);
-        let request = new Request('api/cellar/' + id, {
+        let request = new Request(API_CELLAR + id, {
             method: 'DELETE',
         });
         fetch(request)

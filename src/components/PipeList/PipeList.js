@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 import classes from './PipeList.css';
 
 
+const API_URL = getHostURL();
+const API_PIPES = `${API_URL}/api/pipes/`;
 
-// const imageStyle = {
-//     width: 250,
-//     height: 200,
-//     marginLeft: 44,
-//     borderRadius: 2
-// }
+function getHostURL() {
+  if(window.location.host.indexOf('localhost') !== -1) {
+    return 'http://localhost:8000';
+  } else {
+    return 'Need to put heroku deployed address once I deploy it';
+  }
+}
 
 
 
@@ -28,7 +31,7 @@ class PipeList extends Component {
     
 
     componentDidMount() {
-        fetch('api/pipes/')
+        fetch(API_PIPES)
             .then(res => res.json())
             .then(data => this.setState({
                     pipeData: data
@@ -49,7 +52,7 @@ class PipeList extends Component {
             return pipeEntry.id === id;
         });
         console.log(pipe);
-        let request = new Request('api/pipes/' + id, {
+        let request = new Request(API_PIPES + id, {
             method: 'DELETE',
         });
         fetch(request)
@@ -65,6 +68,10 @@ class PipeList extends Component {
       //! The following will temporarliy do the trick.
       window.location.reload();
     };
+
+    // searchEbay = (event) => {
+    //     fetch()
+    // }
 
 
 
@@ -92,7 +99,7 @@ class PipeList extends Component {
                             <div className={classes.btnContainer}>
                                 <Link to="/PipesAddForm"><button>add</button></Link>
                                 <button onClick={this.removePipeEntry.bind(this, data.id)}>delete</button>
-                                <button>Compare</button> 
+                                <button onClick={this.searchEbay}>Compare</button> 
                                 {/* //! will want a fetch call to ebay here */}
                             </div>
                           </div>         

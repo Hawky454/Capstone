@@ -3,6 +3,21 @@ import { Link } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 
+
+
+const API_URL = getHostURL();
+const API_PIPES_ADD = `${API_URL}/api/pipes`;
+
+function getHostURL() {
+  if(window.location.host.indexOf('localhost') !== -1) {
+    return 'http://localhost:8000';
+  } else {
+    return 'Need to put heroku deployed address once I deploy it';
+  }
+}
+
+
+
 class PipesAddForm extends Component {
     constructor(props) {
         super(props);
@@ -36,6 +51,7 @@ class PipesAddForm extends Component {
     }
 
 
+
     addPipes = (event) => {
       event.preventDefault();
       let newPipeData = {
@@ -49,7 +65,7 @@ class PipesAddForm extends Component {
         source: this.refs.source.value,
         rating: this.refs.rating.value
       }
-      let request = new Request('api/pipes', {
+      let request = new Request(API_PIPES_ADD, {
         method: 'POST',
         headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify(newPipeData)
@@ -64,7 +80,7 @@ class PipesAddForm extends Component {
 
         //! think this is working but I'm sure it's not best practice
         window.location.reload();
-        this.clearPipeForm();
+        // this.clearPipeForm();
      }
 
 
@@ -73,7 +89,6 @@ class PipesAddForm extends Component {
        this.setState({
          [event.target.name]: event.target.value,
        });
-       console.log('[PipesAddForm] state:',this.state);
      }
 
    
@@ -81,14 +96,7 @@ class PipesAddForm extends Component {
 
 
     render() { 
-        // const myBtn = {
-        //     height: 48,
-        //     width: 130.89,
-        //     borderRadius: 5,
-        //     marginTop: 10,
-        //     backgroundColor: '#494942',
-        //     color: '#f7f7df'
-        // }
+   
         const myBtn = {
           color: 'white',
           textDecoration: 'none',
@@ -103,6 +111,7 @@ class PipesAddForm extends Component {
             <NavBar />
             <form ref="pipesAddForm" className="add" method="POST">
               <section id="form-card" className="form-card hidden">
+                <h3 className="sign-up-heading">Pipes Add Form:</h3>
                 <section className="form-row">
                   <section className="form-group col-md-6">
                     <label htmlFor="imgUrl">Image URL</label>

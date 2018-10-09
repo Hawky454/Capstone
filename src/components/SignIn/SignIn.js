@@ -6,7 +6,7 @@ import './SignIn.css';
 
 //! This logic is outside of the React class component believe I'll need to put it in every page...
 const API_URL = getHostURL();
-const AUTH_URL = `${API_URL}/api/users/login`;
+const AUTH_URL = `${API_URL}/api/users/login/`;
 
 function getHostURL() {
   if(window.location.host.indexOf('localhost') !== -1) {
@@ -15,7 +15,7 @@ function getHostURL() {
     return 'Need to put heroku deployed address once I deploy it';
   }
 }
-console.log(AUTH_URL);
+
 
 
 
@@ -24,17 +24,25 @@ class SignIn extends Component {
         super(props);
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            loginError: false,
+            errorMsg: null,
         }
         // console.log(API_URL);
     }
 
+    activateUser = (userData) => {
+      this.setState({
+        userData: userData,
+      })
+    }
 
 
-    
+
+
     addUser = (event) => {
       event.preventDefault();
-      const userData = {
+      let userData = {
         email: this.refs.email.value,
         password: this.refs.password.value
       }
@@ -49,13 +57,36 @@ class SignIn extends Component {
         body: JSON.stringify(userData)
       });
       fetch(request)
-        .then((res) => {
-          res.json()
-            .then((userData) => {
-              console.log('[SignIn.js] userData: ', userData);
+        .then((res) => res.text())
+            .then(text => JSON.parse(text))
+            .then(data => {
+              console.log('data', data);
+              if(userData.email === '' && userData.password === '') {
+                let errorMessage = new Error('Must Enter Valid Info!');
+                alert(errorMessage);
+              }
+              if(data.message === 'User not found in the database!') {
+                alert('Invalid user!')
+              }
+              if(data.message === 'Invalid login ☹️') {
+                alert('Invalid login ☹️')
+              }
+              if(data.result === true) {
+                alert(`Welcome, ${userData.email}`);
+                this.setState({
+                  email: userData.email,
+                  password: userData.password
+                });
+                console.log(this.state);
+                this.setState({
+                  email: '',
+                  password: ''
+                });
+              }
             });
-            console.log('userData', userData);
-        });
+           
+    
+    
       // window.location.reload();
       this.setState({
         email: '',
@@ -76,13 +107,12 @@ class SignIn extends Component {
     
 
     render() {
-      console.log('state:', this.state);
     return(
         <div>
           <NavBar />
             <div className="sign-in-card container">
               <form ref="login">
-                <h2 className="sign-in">sign In</h2>
+                <h2 className="sign-in">Log In</h2>
                 <div className="form-group">
                   <label htmlFor="email">Email address</label>
                   <input type="email" ref="email" value={this.state.email} onChange={this.handleChange}  className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" autoComplete="username-email" name="email"/>

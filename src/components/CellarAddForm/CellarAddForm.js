@@ -4,6 +4,21 @@ import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import classes from './CellarAddForm.css';
 
+
+
+const API_URL = getHostURL();
+const API_CELLAR_ADD = `${API_URL}/api/cellar`;
+
+function getHostURL() {
+  if(window.location.host.indexOf('localhost') !== -1) {
+    return 'http://localhost:8000';
+  } else {
+    return 'Need to put heroku deployed address once I deploy it';
+  }
+}
+
+
+
 class CellarAddForm extends Component {
     constructor(props) {
         super(props);
@@ -54,7 +69,7 @@ class CellarAddForm extends Component {
          source: this.refs.source.value,
          rating: this.refs.rating.value
        }
-       let request = new Request('api/cellar', {
+       let request = new Request(API_CELLAR_ADD, {
          method: 'POST',
          headers: new Headers({'Content-Type': 'application/json'}),
          body: JSON.stringify(newCellarData)
@@ -104,6 +119,7 @@ class CellarAddForm extends Component {
             <div className={classes.add}>
             <form ref="cellarAddForm" method="POST">
               <section id="form-card" className="form-card hidden">
+                <h3 className="sign-up-heading">Tobacco Add Form:</h3>
                 <section className="form-row">
                   <section className="form-group col-md-6">
                     <label htmlFor="image">Image URL</label>

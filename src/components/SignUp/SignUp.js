@@ -5,6 +5,19 @@ import './SignUp.css';
 
 
 
+const API_URL = getHostURL();
+const AUTH_SIGNUP = `${API_URL}/api/users/signup/`;
+
+function getHostURL() {
+  if(window.location.host.indexOf('localhost') !== -1) {
+    return 'http://localhost:8000';
+  } else {
+    return 'Need to put heroku deployed address once I deploy it';
+  }
+}
+
+
+
 
 class SignUp extends Component {
   constructor(props) {
@@ -44,7 +57,8 @@ class SignUp extends Component {
       state: this.refs.state.value,
       zip: this.refs.zip.value
     }
-    let request = new Request('api/users/signup', {
+    this.setState({email: this.state.email, username: this.state.username})
+    let request = new Request(AUTH_SIGNUP, {
       method: 'POST',
       headers: new Headers({'Content-Type': 'application/json'}),
       body: JSON.stringify(newUserData)
@@ -52,7 +66,16 @@ class SignUp extends Component {
     fetch(request)
       .then((res) => {
         res.json()
-          .then((newUserData) => {
+        .then((newUserData) => {
+          if(newUserData.message === '✅ Success!') {
+            alert(`Thank you for signing up!`);
+          }
+          if(newUserData.message === 'Email in use, nice try, Buck-O') {
+            alert(`Sorry, email is already in use`);
+          }
+          if(newUserData.message === 'Invalid user, /signup') {
+            alert('Sorry, invalid user');
+          }
             console.log(newUserData)
           });
       });
@@ -66,17 +89,9 @@ class SignUp extends Component {
         state: '',
         zip: ''
       });
-      alert('Thank you for signing up!');
+      // alert('Thank you for signing up!');
   }
  
-
-
-  
-    // not sure if I should use or not
-    // window.location.reload();
-
-
-
 
       render() {
         return(
