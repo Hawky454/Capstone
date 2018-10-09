@@ -9,7 +9,7 @@ function getHostURL() {
   if(window.location.host.indexOf('localhost') !== -1) {
     return 'http://localhost:8000';
   } else {
-    return 'Need to put heroku deployed address once I deploy it';
+    return 'https://capstone-server-tobac-app.herokuapp.com/';
   }
 }
 
