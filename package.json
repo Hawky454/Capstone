@@ -52,8 +52,8 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "start": "npm run start",
+    "build": "node run build",
     "test": "node scripts/test.js --env=jsdom"
   },
   "proxy": "http://localhost/",
