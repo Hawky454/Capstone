@@ -34,28 +34,27 @@ class Cellar extends Component {
 
     removeCellarEntry = (id) => {
         let response = (window.confirm('ARE YOU SURE YOU WANT TO DELETE THIS ENTRY?'));
-        if(!response) {
+        if (!response) {
             return
         } else {
-        console.log('this is the delete button plust the array of cellarData:', this);
-        let cellarData = this.state.cellarData;
-        let tobacco = cellarData.find((cellarEntry) => {
-            return cellarEntry.id === id;
-        });
-        console.log(tobacco);
-        let request = new Request(API_CELLAR + id, {
-            method: 'DELETE',
-        });
-        fetch(request)
-          .then((res) => {
-              res.json()
-                .then((data) => {
-                    console.log(data)
+            console.log('this is the delete button plust the array of cellarData:', this);
+            let cellarData = this.state.cellarData;
+            let tobacco = cellarData.find((cellarEntry) => {
+                return cellarEntry.id === id;
+            });
+            console.log(tobacco);
+            let request = new Request(API_CELLAR + id, {
+                method: 'DELETE',
+            });
+            fetch(request)
+                .then((res) => {
+                    res.json()
+                        .then((data) => {
+                            console.log(data)
+                        });
                 });
-            
-          });
         };
-      window.location.reload();
+        window.location.reload();
     };
 
     

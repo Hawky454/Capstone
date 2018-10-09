@@ -44,28 +44,27 @@ class PipeList extends Component {
 
     removePipeEntry = (id) => {
         let response = window.confirm('ARE YOU SURE YOU WANT TO DELETE THIS ENTRY?');
-        if(!response ) {
+        if (!response) {
             return
         } else {
-        console.log('this is the delete button plus the array of pipeData:', this);
-        let pipeData = this.state.pipeData;
-        let pipe = pipeData.find((pipeEntry) => {
-            return pipeEntry.id === id;
-        });
-        console.log(pipe);
-        let request = new Request(API_PIPES + id, {
-            method: 'DELETE',
-        });
-        fetch(request)
-          .then((res) => {
-              res.json()
-                .then((data) => {
-                    console.log(data);
+            console.log('this is the delete button plus the array of pipeData:', this);
+            let pipeData = this.state.pipeData;
+            let pipe = pipeData.find((pipeEntry) => {
+                return pipeEntry.id === id;
+            });
+            console.log(pipe);
+            let request = new Request(API_PIPES + id, {
+                method: 'DELETE',
+            });
+            fetch(request)
+                .then((res) => {
+                    res.json()
+                        .then((data) => {
+                            console.log(data);
+                        });
                 });
-            
-          });
         };
-      window.location.reload();
+        window.location.reload();
     };
 
     
