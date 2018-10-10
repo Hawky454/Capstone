@@ -1,21 +1,21 @@
  # The Tobacco Cellar
 
-_*Technogogies used:*_
+**Technogogies used:***
 
 **client-side:**
 
-1. React
-2. React Router
-3. CSS Modules
-4. Bootstrap
+1. **React**
+2. **React Router**
+3. **CSS Modules**
+4. **Bootstrap**
 
 **Server-side:**
 
-1. Node.js
-2. Express
-3. Knex.js
-4. PostgreSQL
-5. bCrypt
+1. **Node.js**
+2. **Express**
+3. **Knex.js**
+4. **PostgreSQL**
+5. **bCrypt**
 
 
 *I've decided to recreate my quarter two project into an exciting and fully functional application using React.js for the front end, Express and PostgreSQL for the back end.
