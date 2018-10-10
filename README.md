@@ -93,9 +93,9 @@ I used Boostrap as my css framework but overall I used basic vanilla JavaScript 
 
 #User Stories:
 
-*As a user, I need to be able to identify the company (style/brand/logo)
-*As a user, I need to be able to delete existing tobacco brands
-*As a user, I need to be able to list tobacco brands
+As a user, I need to be able to identify the company (style/brand/logo)<br/>
+As a user, I need to be able to delete existing tobacco brands<br/>
+As a user, I need to be able to list tobacco brands<br/>
 As a user, I need to be able to edit existing tobacco entries
 As a user, I need to be able to link to a specific tobacco brand
 As a user, I need to be able to list all pipes
