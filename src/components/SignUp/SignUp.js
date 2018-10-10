@@ -67,8 +67,8 @@ class SignUp extends Component {
       .then((res) => {
         res.json()
         .then((newUserData) => {
-          if(newUserData.message === '✅ Success!') {
-            alert(`Thank you for signing up!`);
+          if(newUserData.message === '✅ Success!') { 
+            alert('Thank you for signing up!');
           }
           if(newUserData.message === 'Email in use, nice try, Buck-O') {
             alert(`Sorry, email is already in use`);
