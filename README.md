@@ -92,9 +92,10 @@ Input form for pipes:
 I used Boostrap as my css framework but overall I used basic vanilla JavaScript throughout the app, however, I did experiment with ejs and I set up my 'add' form to allow it to populate the the database and respective page.
 
 #User Stories:
-As a user, I need to be able to identify the company (style/brand/logo)
-As a user, I need to be able to list tobacco brands
-As a user, I need to be able to delete existing tobacco brands
+
+*As a user, I need to be able to identify the company (style/brand/logo)
+*As a user, I need to be able to delete existing tobacco brands
+*As a user, I need to be able to list tobacco brands
 As a user, I need to be able to edit existing tobacco entries
 As a user, I need to be able to link to a specific tobacco brand
 As a user, I need to be able to list all pipes
