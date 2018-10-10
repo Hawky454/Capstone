@@ -1,6 +1,6 @@
  # The Tobacco Cellar
 
-_**Technogogies used:**_
+_*Technogogies used:*_
 
 **client-side:**
 
