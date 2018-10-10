@@ -30,7 +30,7 @@ Until now the community has had no real good way of keeping track of their tobac
 
 * What outputs do they need?
 
-Tobacco (cellared):                                                                               
+**Tobacco (cellared):**                                                                               
 1. Name (Brand/House)
 2. Blend (Name of blend)
 3. Total Weight (lbs, oz, grams)
@@ -41,16 +41,8 @@ Tobacco (cellared):
 8. Rating (1 thru 5)
 9. Image (if provided)
 
-Opened Tobacco (Currently in use):
-1. Brand
-2. Blend
-3. Total Weight
-4. Date Bought
-5. Days it’s been open
-6. Cost
-7. Source
 
-Pipes:
+**Pipes:**
 1. Brand
 2. Model
 3. Date of Purchase
@@ -60,8 +52,8 @@ Pipes:
 
 Each section of outputs will allow the user CRUD actions.
 
-What inputs are needed to generate those outputs?
-Input form for cellared tobacco:
+
+**Input form for cellared tobacco:**
 1. Name (Brand/House)
 2. Blend (Name of blend)
 3. Total Weight (lbs, oz, grams)
@@ -72,7 +64,7 @@ Input form for cellared tobacco:
 8. Rating (1 thru 5)
 9. Image (url)
 
-Input form for Opened Tobacco (Currently in use);
+**Input form for Opened Tobacco (Currently in use);**
 1. Brand
 2. Blend
 3. Total Weight
@@ -81,7 +73,7 @@ Input form for Opened Tobacco (Currently in use);
 6. Cost
 7. Source
 
-Input form for pipes:
+**Input form for pipes:**
 1. Brand
 2. Model
 3. Date of Purchase
@@ -91,28 +83,28 @@ Input form for pipes:
 
 I used Boostrap as my css framework but overall I used basic vanilla JavaScript throughout the app, however, I did experiment with ejs and I set up my 'add' form to allow it to populate the the database and respective page.
 
-#User Stories:
+**User Stories:**
 
 As a user, I need to be able to identify the company (style/brand/logo)<br/>
 As a user, I need to be able to delete existing tobacco brands<br/>
 As a user, I need to be able to list tobacco brands<br/>
-As a user, I need to be able to edit existing tobacco entries
-As a user, I need to be able to link to a specific tobacco brand
-As a user, I need to be able to list all pipes
-As a user, I need to be able to delete existing pipe entries
-As a user, I need to be able to edit existing pipe entries
-As a user, I need to be able to add new pipes
-As a user, I need to be able to navigate between pipes and tobaccos
-As a user, I need to be able to add a new tobacco entry
-As a user, I need to be able to filter/sort tobaccos by brand,age or Rating
-As a user, I need to be able to limit the number of tobacco entries I receive at a time
-As a user, I need to be able to limit the number of pipe entries I receive at a time
-As a user, I need to be able to search for tobaccos by house, brand or style
-As a user, I need to be able to search for pipes
-As a user, I need to be able to search for open (current use) tobaccos
-As a user, I need to be able to see the total number of cellared tobaccos
-As a user, I need to be able to see the total number of opened tobaccos
-As a user, I need to be able to see the total number of pipes
+As a user, I need to be able to edit existing tobacco entries<br/>
+As a user, I need to be able to link to a specific tobacco brand<br/>
+As a user, I need to be able to list all pipes<br/>
+As a user, I need to be able to delete existing pipe entries<br/>
+As a user, I need to be able to edit existing pipe entries<br/>
+As a user, I need to be able to add new pipes<br/>
+As a user, I need to be able to navigate between pipes and tobaccos<br/>
+As a user, I need to be able to add a new tobacco entry<br/>
+As a user, I need to be able to filter/sort tobaccos by brand,age or Rating<br/>
+As a user, I need to be able to limit the number of tobacco entries I receive at a time<br/>
+As a user, I need to be able to limit the number of pipe entries I receive at a time<br/>
+As a user, I need to be able to search for tobaccos by house, brand or style<br/>
+As a user, I need to be able to search for pipes<br/>
+As a user, I need to be able to search for open (current use) tobaccos<br/>
+As a user, I need to be able to see the total number of cellared tobaccos<br/>
+As a user, I need to be able to see the total number of opened tobaccos<br/>
+As a user, I need to be able to see the total number of pipes<br/>
 
 # Wireframe
 ![WireframeQ4](/src/assets/Pg1.png)
