@@ -1,15 +1,15 @@
  # The Tobacco Cellar
 
-Technogogies used:
+_**bold**_ Technogogies used:
 
-client-side:
+**bold** client-side:
 
 1. React
 2. React Router
 3. CSS Modules
 4. Bootstrap
 
-Server-side:
+**bold** Server-side:
 
 1. Node.js
 2. Express
