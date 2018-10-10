@@ -1,6 +1,6 @@
  # The Tobacco Cellar
 
-**Technogogies used:***
+**Technogogies used:**
 
 **client-side:**
 
@@ -20,7 +20,7 @@
 
 *I've decided to recreate my quarter two project into an exciting and fully functional application using React.js for the front end, Express and PostgreSQL for the back end.
 
-The Tobacco Cellar is designed to keep track of my cellared pipe tobacco & my pipe collection as well as the tobacco I currently have open and is in use.
+The Tobacco Cellar is designed to keep track of my cellared pipe tobacco & my pipe collection.
 
 Believe it or not there is a decent size community of pipe smokers that collect and age large quantities of pipe tobacco.  Generally, any tobacco with plenty of natural sugars will age wonderfully. Blends go through a fermentation process in the tin, and will improve significantly over time, developing increasing complexity and a wine-like qualities that is hard to describe. I think pipe smoking is one of the most underrated pleasures in existence. If stored properly, a blend can continue to improve in the tin for up to 40 to 50 years before it starts to 'spoil'.
 
