@@ -6,9 +6,6 @@ const Home = (props) => {
     return(
         <div className={classes.Home}>
           <div>
-            <section className={classes.rectangleTop}>
-              <p>The Tobacco Cellar</p>
-            </section>
             <div className={classes.container}>
               <section className={classes.card1}>
               </section>
@@ -17,9 +14,6 @@ const Home = (props) => {
               <section className={classes.card3}>
               </section>
             </div>
-            <section className={classes.rectangleBottom}>
-              <p>Is finally here!</p>
-            </section>
           </div>
         </div>
     );

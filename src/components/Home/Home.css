@@ -2,21 +2,8 @@
    background images and patterns are better suited to the index.css                 
 */
 
-/* body {
-    background: url('../../assets/oriental.png'); no-repeat center center fixed
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-width: 100vw;
-    min-height: 100vh;
-} */
-
-
-
-
 .Home {
-    margin: 125px 165px;
+    margin: 275px 165px;
 }
 
 .Home .container {
@@ -26,8 +13,8 @@
 .card1 {
     width: 350px;
     height: 350px;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 3px solid black;
+    /* border-radius: 5px; */
     box-shadow: 5px 10px 8px #888888;
     margin: auto;
     background: url('../../assets/four-pipes.jpg');
@@ -43,8 +30,8 @@
 .card2 {
     width: 350px;
     height: 350px;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 3px solid black;
+    /* border-radius: 5px; */
     box-shadow: 5px 10px 8px #888888;
     margin: auto;
     background: url('../../assets/my-pipes.jpg') center;
@@ -59,8 +46,8 @@
 .card3 {
     width: 350px;
     height: 350px;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 3px solid black;
+    /* border-radius: 5px; */
     box-shadow: 5px 10px 8px #888888;
     margin: auto;
     background: url('../../assets/pipe-tobacco.jpg') center;
