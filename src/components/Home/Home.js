@@ -5,7 +5,6 @@ const Home = (props) => {
     
     return(
         <div className={classes.Home}>
-          <div>
             <div className={classes.container}>
               <section className={classes.card1}>
               </section>
@@ -14,7 +13,6 @@ const Home = (props) => {
               <section className={classes.card3}>
               </section>
             </div>
-          </div>
         </div>
     );
 }

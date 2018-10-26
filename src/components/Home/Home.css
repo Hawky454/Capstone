@@ -1,84 +1,134 @@
-.Home {
-    margin: 275px 165px;
+@media only screen and (min-width: 801px) {
+    .Home {
+        margin: 275px auto;
+    }
+    
+    .Home .container {
+        display: flex;
+    }
+    
+    .card1 {
+        width: 350px;
+        height: 350px;
+        border: 3px solid black;
+        box-shadow: 5px 10px 8px #888888;
+        margin: auto 10px;
+        background: url('../../assets/four-pipes.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 25vw;
+        min-height: 25vh;
+    
+    }
+    
+    .card2 {
+        width: 350px;
+        height: 350px;
+        border: 3px solid black;
+        box-shadow: 5px 10px 8px #888888;
+        margin: auto 10px;
+        background: url('../../assets/my-pipes.jpg') center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 25vw;
+        min-height: 25vh;
+    }
+    
+    
+    .card3 {
+        width: 350px;
+        height: 350px;
+        border: 3px solid black;
+        box-shadow: 5px 10px 8px #888888;
+        margin: auto 10px;
+        background: url('../../assets/pipe-tobacco.jpg') center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 25vw;
+        min-height: 25vh;
+    }
 }
 
-.Home .container {
-    display: flex;
-}
 
-.card1 {
-    width: 350px;
-    height: 350px;
-    border: 3px solid black;
-    box-shadow: 5px 10px 8px #888888;
-    margin: auto;
-    background: url('../../assets/four-pipes.jpg');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-width: 25vw;
-    min-height: 25vh;
-
-}
-
-.card2 {
-    width: 350px;
-    height: 350px;
-    border: 3px solid black;
-    box-shadow: 5px 10px 8px #888888;
-    margin: auto;
-    background: url('../../assets/my-pipes.jpg') center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-width: 25vw;
-    min-height: 25vh;
-}
-
-
-.card3 {
-    width: 350px;
-    height: 350px;
-    border: 3px solid black;
-    box-shadow: 5px 10px 8px #888888;
-    margin: auto;
-    background: url('../../assets/pipe-tobacco.jpg') center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-width: 25vw;
-    min-height: 25vh;
-}
-
-
-
-.Home p {
-  margin-top: 35px;
-  font-size: 30px;
-}
 
 /* !First attempt at using @media queries and it's working 10-25-18 */
 @media only screen and (max-width: 800px) {
+    .Home {
+        margin: 275px auto;
+    }
     .container {
         display: flex;
         justify-content: center;
     }
+
+    /* S A F E Z O N E */
     .card1 {
         width: 100px;
         height: 100px;
-        margin-right: 10px;
+        border: 1px solid black;
+        box-shadow: 5px 10px 8px #888888;
+        margin: auto;
+        background: url('../../assets/four-pipes.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 25vw;
+        min-height: 25vw;
     }
     .card2 {
         width: 100px;
         height: 100px;
+        border: 1px solid black;
+        box-shadow: 5px 10px 8px #888888;
+        margin: auto;
+        background: url('../../assets/my-pipes.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 25vw;
+        min-height: 25vw;
     }
     .card3 {
         width: 100px;
         height: 100px;
-        margin-left: 10px;
+        border: 1px solid black;
+        box-shadow: 5px 10px 8px #888888;
+        margin: auto;
+        background: url('../../assets/pipe-tobacco.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 25vw;
+        min-height: 25vw;
+    }
+    
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        display: flex;
+        justify-content: center;
+
+    }
+    .card1 {
+        margin: 5px;
+    }
+    .card2 {
+        margin: 5px;
+    }
+    .card3 {
+        margin: 5px;
     }
 }
+
+
 
