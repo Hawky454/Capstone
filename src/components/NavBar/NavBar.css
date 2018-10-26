@@ -31,3 +31,25 @@ span:hover {
     color: black;
 }
 
+
+/*! all new code below this line... can delete at any time and everything else will be okay */
+@media only screen and (max-width: 896px) {
+    /* .NavBar {
+        display: flex;
+        flex-direction: column;
+    }
+    .rightMediaQuery {
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        float: left;
+
+    } */
+
+    /* .NavBar {
+        background: url('../../assets/burger-menu.png') no-repeat black;
+    } */
+   
+
+}
+

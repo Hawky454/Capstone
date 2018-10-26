@@ -1,6 +1,7 @@
 @media only screen and (min-width: 801px) {
     .Home {
-        margin: 275px auto;
+        margin: 275px 165px; 
+
     }
     
     .Home .container {
@@ -65,9 +66,9 @@
     .container {
         display: flex;
         justify-content: center;
+        margin-top: 300px;
     }
 
-    /* S A F E Z O N E */
     .card1 {
         width: 100px;
         height: 100px;
