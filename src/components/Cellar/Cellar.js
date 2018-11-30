@@ -29,7 +29,7 @@ class Cellar extends Component {
             .then(data => this.setState({
                     cellarData: data
                 },
-                () => console.log('cellar data fetched...:', data)));
+                () => console.table(data)));
     }
 
     removeCellarEntry = (id) => {
